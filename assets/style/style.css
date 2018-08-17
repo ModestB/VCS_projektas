@@ -1,0 +1,28 @@
+/* RESET */
+*,
+*::after,
+*::before,
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* LANDING PAGE/HEADER */
+.site-header{ 
+    background-image: url("../../optimize_img/girl-comp.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.img-opacity{
+    min-height: 100vh;
+    background-color: #000;
+    opacity: .4;
+}
+
+.container{
+    max-width: 1200px;
+}
