@@ -14,25 +14,27 @@
 
     <!-- LANDING PAGE -->
     <header class="site-header">
-        <div class="img-opacity flex-container">
+        <div class="img-opacity flex-container flex-container--column">
 
-            <!-- Header start-->
-            <div class="container header">
-                <div class=" flex-container">
-                    <div class="logo">
-                        <p>Lorem ipsum</p>
+             <!-- Header start-->
+            <div class="container-fluid flex-container sticky" id="header">
+                <div class="container header">
+                    <div class="flex-container">
+                        <div class="logo">
+                            <p>Lorem ipsum</p>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Work</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <nav>
-                        <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Work</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
                 </div>
-            </div> <!--Header end-->
-
+            </div> <!--Header end -->
+           
             <!-- Hero page -->
             <div class="container hero">
                 <h1>Creative Template</h1>
@@ -42,7 +44,48 @@
         </div>
     </header>
 
+    <!-- About me -->
+    <section class="flex-container flex-container--column about">
+        <div class="container flex-container">
+            <div class="col-1-2">
+                <h3>About me</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem officiis exercitationem quis autem voluptas explicabo adipisci, at vero accusantium itaque nulla ad, sint odit ratione voluptate corrupti reprehenderit blanditiis dolores.</p>
+                <p>FOLLOW ON: 
+                    <a href="#"><i class="icon-facebook2"></i></a>
+                    <a href="#"><i class="icon-linkedin"></i></a>
+                </p>
+            </div>
+            <div class="col-1-2">
+                <div class="self-img">
+                    <img src="optimize_img/selfimg-comp.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="about-work container flex-container">
+            <div>
+                <i class="icon-clipboard"></i>
+                <h4>Plan</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum earum</p>
+            </div>
+            <div>
+                <i class="icon-pencil2"></i>
+                <h4>Design</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum earum</p>
+            </div>
+            <div>
+                <i class="icon-wrench"></i>
+                <h4>Develop</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum earum</p>
+            </div>
+            <div>
+                <i class="icon-rocket"></i>
+                <h4>Lauch</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum earum</p>
+            </div>
+        </div>
+    </section>
 
-    
+
+    <script src="./assets/scripts/scripts.js"></script>
 </body>
 </html>
