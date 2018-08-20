@@ -375,7 +375,10 @@ li {
 .icon-clipboard,
 .icon-pencil2,
 .icon-wrench,
-.icon-rocket {
+.icon-rocket,
+.icon-html-five,
+.icon-css3,
+.icon-javascript {
   display: block;
   font-size: 3.8rem;
   margin-bottom: 35px;
@@ -431,6 +434,18 @@ li {
 
 .icon-rocket:before {
   content: "\e9a5";
+}
+
+.icon-html-five:before {
+  content: "\eae4";
+}
+
+.icon-css3:before {
+  content: "\eae6";
+}
+
+.icon-javascript:before {
+  content: "\e900";
 }
 
 /* GLOBAL */
@@ -502,7 +517,7 @@ p {
 
 .img-opacity {
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .header .flex-container {

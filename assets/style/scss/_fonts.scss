@@ -29,7 +29,10 @@
   .icon-clipboard,
   .icon-pencil2,
   .icon-wrench,
-  .icon-rocket{
+  .icon-rocket,
+  .icon-html-five,
+  .icon-css3,
+  .icon-javascript{
     display: block;  
     font-size: 3.8rem;
     margin-bottom: 35px;
@@ -72,4 +75,13 @@
   }
   .icon-rocket:before {
     content: "\e9a5";
+  }
+  .icon-html-five:before {
+    content: "\eae4";
+  }
+  .icon-css3:before {
+    content: "\eae6";
+  }
+  .icon-javascript:before {
+    content: "\e900";
   }
