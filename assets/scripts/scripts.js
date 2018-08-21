@@ -19,36 +19,95 @@ const addSticky = () => {
 window.onscroll = addSticky;
 
 
-var slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+showSlides();
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
 
-function showSlides(n) {
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+
+// function showSlides(n) {
     
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+//   let i;
+//   const slides = document.getElementsByClassName("mySlides");
+//   const  dots = document.getElementsByClassName("dot");
 
-  if (n > slides.length) {
-      slideIndex = 1
-  }    
-  if (n < 1) {
-      slideIndex = slides.length
-  }
+//   if (n > slides.length) {
+//       slideIndex = 1
+//   }    
+//   if (n < 1) {
+//       slideIndex = slides.length
+//   }
 
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";     
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";     
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//       dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+// }
+
+function addSlideStyle(slideIndex, slides){
+    slides[slideIndex].style.display = "block";
+    slides[slideIndex].style.animationName = "fadeIn";
+    slides[slideIndex].style.animationDuration = "5s";
+    
+   
+    window.setInterval(() => {
+        slides[slideIndex].style.animationName = "fadeOut";
+        slides[slideIndex].style.animationDuration = "5s";
+       
+   }, 10000)
+   
 }
+
+function showSlides() {
+    let slideIndex = 0;
+
+    const slides = document.getElementsByClassName("mySlides");
+    const slidesArray = Array.from(slides);
+    console.log(slidesArray.length)
+    
+    // slides[slideIndex].style.display = "block";
+    addSlideStyle(slideIndex, slides)
+
+
+    window.setInterval(() => {
+       slidesArray.forEach((slide) => slide.style.display = "none");
+
+       if (slideIndex < slides.length-1){
+           slideIndex++;
+       } else if (slideIndex === slides.length -1){
+           slideIndex = 0;
+       } else {
+            slideIndex --;
+       }
+
+       console.log(slideIndex)
+       addSlideStyle(slideIndex, slides)
+    }, 15000);
+    console.log("works")
+
+
+
+
+  
+    // if (n > slides.length) {
+    //     slideIndex = 1
+    // }    
+    // if (n < 1) {
+    //     slideIndex = slides.length
+    // }
+  
+    // for (i = 0; i < slides.length; i++) {
+    //     slides[i].style.display = "none";     
+    // }
+
+    // slides[slideIndex-1].style.display = "block";
+  }
