@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -384,6 +385,12 @@ li {
   margin-bottom: 35px;
 }
 
+.icon-html-five,
+.icon-css3,
+.icon-javascript {
+  color: white;
+}
+
 .icon-pencil2:before {
   content: "\e906";
 }
@@ -485,6 +492,14 @@ p {
 
 .col-1-4 {
   width: 25%;
+}
+
+.col-1-4 h4 {
+  font-size: 1.5rem;
+}
+
+.col-3-4 {
+  width: 75%;
 }
 
 .flex-container {
@@ -664,9 +679,10 @@ nav a:hover {
 }
 
 .separation {
-  height: 200px;
-  margin-top: 120px;
+  height: 225px;
+  margin-top: 110px;
   background-color: #797979;
+  color: white;
 }
 
 .separation .flex-container {
@@ -675,6 +691,11 @@ nav a:hover {
   justify-content: center;
 }
 
+.separation .container {
+  margin-top: 3.4rem;
+}
+
+/*Latest work START*/
 .latest-work {
   margin-top: 6.8rem;
 }
@@ -688,16 +709,6 @@ nav a:hover {
   font-size: 1.875rem;
   text-transform: uppercase;
   margin-bottom: 5rem;
-}
-
-.view-more a {
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.view-more a i {
-  margin-left: 35px;
 }
 
 .latest-work--cards {
@@ -729,9 +740,18 @@ nav a:hover {
   overflow: hidden;
   width: 100%;
   height: 0;
-  -webkit-transition: .5s ease;
-  -o-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: .4s ease;
+  -o-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.img-container:hover {
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.75);
+  -webkit-transition: .4s ease;
+  -o-transition: .4s ease;
+  transition: .4s ease;
 }
 
 .img-container:hover .overlay {
@@ -739,10 +759,20 @@ nav a:hover {
   height: 100%;
 }
 
+.img-container:hover .overlay,
+.img-container:hover img {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transition: .4s ease;
+  -o-transition: .4s ease;
+  transition: .4s ease;
+}
+
 .img-container .text {
   white-space: nowrap;
   color: white;
-  font-size: 20px;
+  font-size: 1.25rem;
   position: absolute;
   overflow: hidden;
   top: 50%;
@@ -750,4 +780,123 @@ nav a:hover {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+.view-more a {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.view-more a i {
+  margin-left: 35px;
+}
+
+.separation-quotes {
+  height: 300px;
+}
+
+.separation-quotes img {
+  border-radius: 50%;
+}
+
+blockquote {
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "“" "”" "‘" "’";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+  color: #ccc;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.8em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
 }
