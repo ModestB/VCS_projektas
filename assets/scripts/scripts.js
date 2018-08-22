@@ -1,113 +1,67 @@
-//On scroll add class sticky background to element with ID #header
-/* BUGS:
-    --sticky-bakground uzlenda uz nuotraukos self-img
-*/
+//On scroll adds class sticky background to element with ID #header
 const navbar = document.querySelector('#header');
 const sticky = navbar.offsetHeight;
 
 const addSticky = () => {
-    // console.log(sticky)
-    // console.log(window.pageYOffset)
-    if (window.pageYOffset >= sticky) {
-        
+    if (window.pageYOffset >= sticky) { 
         navbar.classList.add("sticky-background")
     } else {
         navbar.classList.remove("sticky-background");
     } 
 }
 
-window.onscroll = addSticky;
+// ADDS @fadeIn style to single slide determined by slideIndex
+// MAKES that slide visible display: block
+// WAITS waitTime(ms)
+// REPLACES @fadeIn style with @fadeOut
+// RESOLVES after 5000ms = animationDurationTime
+// MAKES all slides invisible display:none
+const addSlideStyle = function(slideIndex, slides, waitTime){
+    const slidesArray = Array.from(slides);
+    let slide = slides[slideIndex];
 
-
-
-showSlides();
-
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides(n) {
+    slide.style.display = "block";
+    slide.style.animationName = "fadeIn";
+    slide.style.animationDuration = "5s";
     
-//   let i;
-//   const slides = document.getElementsByClassName("mySlides");
-//   const  dots = document.getElementsByClassName("dot");
-
-//   if (n > slides.length) {
-//       slideIndex = 1
-//   }    
-//   if (n < 1) {
-//       slideIndex = slides.length
-//   }
-
-//   for (i = 0; i < slides.length; i++) {
-//       slides[i].style.display = "none";     
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//       dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";
-//   dots[slideIndex-1].className += " active";
-// }
-
-function addSlideStyle(slideIndex, slides){
-    slides[slideIndex].style.display = "block";
-    slides[slideIndex].style.animationName = "fadeIn";
-    slides[slideIndex].style.animationDuration = "5s";
-    
-   
-    window.setInterval(() => {
-        slides[slideIndex].style.animationName = "fadeOut";
-        slides[slideIndex].style.animationDuration = "5s";
-       
-   }, 10000)
-   
+   return new Promise(resolve => {
+        setTimeout(() => { 
+            slide.style.animationName = "fadeOut";
+            slide.style.animationDuration = "5s"; 
+            setTimeout(() => {
+                resolve(slidesArray.forEach((slide) => slide.style.display = "none"));
+            }, 5000);            
+        },waitTime)   
+   });
 }
 
-function showSlides() {
-    let slideIndex = 0;
-
+// AT RUN calls addSlideStyle function for initialization
+// CHECKS current slideIndex
+// RESOLVES with reruning checkSlideIndex
+// Infinity loop
+ const  addSlide = async function (index = 0) {
+    let slideIndex = index;
     const slides = document.getElementsByClassName("mySlides");
-    const slidesArray = Array.from(slides);
-    console.log(slidesArray.length)
-    
-    // slides[slideIndex].style.display = "block";
-    addSlideStyle(slideIndex, slides)
 
+    return new Promise( async resolve => {
+        await addSlideStyle(slideIndex, slides, 10000);
 
-    window.setInterval(() => {
-       slidesArray.forEach((slide) => slide.style.display = "none");
-
-       if (slideIndex < slides.length-1){
-           slideIndex++;
-       } else if (slideIndex === slides.length -1){
-           slideIndex = 0;
-       } else {
+        if (slideIndex < slides.length-1){
+            slideIndex++;
+        } else if (slideIndex === slides.length -1){
+            slideIndex = 0;
+        } else {
             slideIndex --;
-       }
-
-       console.log(slideIndex)
-       addSlideStyle(slideIndex, slides)
-    }, 15000);
-    console.log("works")
-
-
-
-
-  
-    // if (n > slides.length) {
-    //     slideIndex = 1
-    // }    
-    // if (n < 1) {
-    //     slideIndex = slides.length
-    // }
-  
-    // for (i = 0; i < slides.length; i++) {
-    //     slides[i].style.display = "none";     
-    // }
-
-    // slides[slideIndex-1].style.display = "block";
+        }
+        resolve(addSlide(slideIndex, slides));
+    });
   }
+
+
+
+window.onscroll = addSticky;
+addSlide();
+
+// ADD NEW METHOD FOR SLIDE BUTTONS
+// -BUTTONS COLOR SHOULD CHANGE THEN SLIDE CHANGES
+// -THINK ABOUT USER CLICK ON BUTTON
