@@ -498,6 +498,8 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 p {
@@ -542,6 +544,21 @@ p {
   width: 60%;
 }
 
+h3, p {
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+
+p {
+  line-height: 1.75;
+  color: #797979;
+}
+
 .flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -559,6 +576,11 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 /* LANDING PAGE */
@@ -671,21 +693,6 @@ nav a:hover {
 /* ABOUT */
 .about {
   margin-top: 8.75rem;
-}
-
-.about h3, .about p {
-  text-align: left;
-}
-
-.about h3 {
-  font-size: 1.875rem;
-  text-transform: uppercase;
-  margin-bottom: 5rem;
-}
-
-.about p {
-  line-height: 1.75;
-  color: #797979;
 }
 
 .self-img {
@@ -876,6 +883,7 @@ blockquote:after {
 
 blockquote p {
   display: inline;
+  color: white;
 }
 
 .swiper-container {
@@ -885,8 +893,7 @@ blockquote p {
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
+  font-size: 1.1rem;
   background: #797979;
   /* Center slide text vertically */
   display: -webkit-box;
@@ -901,4 +908,69 @@ blockquote p {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+
+.swiper-slide p {
+  color: #ffffff;
+}
+
+.latest-blog {
+  margin-top: 6.8rem;
+}
+
+.latest-blog .flex-container {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.card {
+  max-width: 350px;
+  background-color: white;
+  margin-bottom: 40px;
+}
+
+.card-main {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
+}
+
+.card img {
+  width: 100%;
+}
+
+.flex-container.card-info {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.card-info .flex-container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.card-info p {
+  margin: 0;
+  padding-left: 10px;
+}
+
+.flex-container.flex-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.card-box {
+  margin: 0 35px;
+}
+
+.card-box > p {
+  font-size: 14px;
+  text-align: justify;
 }

@@ -60,8 +60,5 @@ const addSlideStyle = function(slideIndex, slides, waitTime){
 
 
 window.onscroll = addSticky;
-addSlide();
+//addSlide();
 
-// ADD NEW METHOD FOR SLIDE BUTTONS
-// -BUTTONS COLOR SHOULD CHANGE THEN SLIDE CHANGES
-// -THINK ABOUT USER CLICK ON BUTTON
