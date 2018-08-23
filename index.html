@@ -8,6 +8,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Lora:400,700|Roboto:300i,400,700&amp;subset=latin-ext" rel="stylesheet">
     <!-- <link rel="stylesheet" href="assets/style/normalize.css"> -->
+
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
     <link rel="stylesheet" href="assets/style/css/main.css">
 
 
@@ -172,61 +175,88 @@
         </div>
     </section> <!-- LATEST work END-->
         
-
     <!-- QUOTES SEPARATION-->
     <section class="separation separation-quotes  container-fluid flex-container">
         <div class="container">
-            <div  class= "slideshow-container">
-
-                <!-- Slide ONE -->
-                <div class="mySlides">
-                    <div class="flex-container">
-                        <div class="col-1-4">
-                                <img src="optimize_img/person.jpeg" alt="">
-                                <p>One</p>
+            <div class= "swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide ONE -->
+                    <div class="swiper-slide">
+                        <div class="flex-container ">
+                            <div class="col-1-4  flex-container flex-container--column">
+                                    <img src="optimize_img/person.jpeg" alt="">
+                                    <p>One</p>
+                            </div>
+                            <div class="col-3-5">  <!-- class="col-3-4"-->
+                                <blockquote>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! Id porro nostrum ratione.</p>
+                                </blockquote>
+                            </div>
                         </div>
-                        <div class="col-3-4">  <!-- class="col-3-4"-->
-                            <blockquote><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! Id porro nostrum ratione. Sequi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla autem voluptas, natus fugiat eius dicta quia placeat. Ad labore sunt iusto culpa alias tempora, nihil quaerat cum error inventore ab.</p></blockquote>
+                    </div>
+                    <!-- Slide TWO -->
+                    <div class="swiper-slide">
+                        <div class="flex-container">
+                            <div class="col-1-4 flex-container flex-container--column"> <!-- Centruoti vertikaliai-->
+                                    <img src="optimize_img/person.jpeg" alt="">
+                                    <p>Two</p>
+                            </div>
+                            <div class="col-3-5">
+                                <blockquote>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! ab.</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide Three -->
+                    <div class="swiper-slide">
+                        <div class="flex-container">
+                            <div class="col-1-4  flex-container flex-container--column">
+                                    <img src="optimize_img/person.jpeg" alt="">
+                                    <p>Three</p>
+                            </div>
+                            <div class="col-3-5">
+                                <blockquote>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! ab.</p>
+                                </blockquote>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Slide TWO -->
-                <div class="mySlides">
-                    <div class="flex-container">
-                        <div class="col-1-4">
-                                <img src="optimize_img/person.jpeg" alt="">
-                                <p>Two</p>
-                        </div>
-                        <div class="col-3-4">  <!-- class="col-3-4"-->
-                            <blockquote><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! ab.</p></blockquote>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide Three -->
-                <div class="mySlides">
-                    <div class="flex-container">
-                        <div class="col-1-4">
-                                <img src="optimize_img/person.jpeg" alt="">
-                                <p>Three</p>
-                        </div>
-                        <div class="col-3-4">  <!-- class="col-3-4"-->
-                            <blockquote><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! ab.</p></blockquote>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="dot-container">
-                    <span class="dot" onclick="currentSlide(1)"></span> 
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>  
-                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination-white"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
             </div>
         </div>
     </section>
 
+
     <div style="padding-top: 500px;"></div>
 
 
+
     <script src="./assets/scripts/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+      <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 40,
+        centeredSlides: true,
+        autoplay: {
+            delay: 10000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+  </script>
 </body>
 </html>
