@@ -373,6 +373,10 @@ li {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-white {
+  color: #fff;
+}
+
 .icon-clipboard,
 .icon-pencil2,
 .icon-wrench,
@@ -1265,4 +1269,161 @@ footer {
 
 .contact__details div > p:nth-child(1) {
   margin-bottom: 2rem;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px;
+  -webkit-appearance: none;
+}
+
+footer h3 {
+  margin-top: 6.8rem;
+}
+
+.send-mail {
+  /* FF 4-18 */
+  /* FF 19+ */
+  /* IE 10+ */
+  /* FF 4-18 */
+  /* FF 19+ */
+  /* IE 10+ */
+}
+
+.send-mail form .flex-container {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.send-mail input, .send-mail label, .send-mail textarea {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.75;
+}
+
+.send-mail input, .send-mail textarea {
+  margin: 1rem 0;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #797979;
+  width: 100%;
+}
+
+.send-mail label {
+  font-size: 1rem;
+  color: #797979;
+}
+
+.send-mail textarea {
+  height: 160px;
+  resize: none;
+}
+
+.send-mail input::-webkit-input-placeholder,
+.send-mail textarea::-webkit-input-placeholder {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.send-mail input:-ms-input-placeholder,
+.send-mail textarea:-ms-input-placeholder {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.send-mail input::-ms-input-placeholder,
+.send-mail textarea::-ms-input-placeholder {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.send-mail input::placeholder,
+.send-mail textarea::placeholder {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.send-mail button {
+  min-width: 160px;
+  height: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 25px;
+  margin-top: 1rem;
+  border: 1px solid #797979;
+  background-color: #000;
+  color: #fff;
+}
+
+.send-mail button i {
+  padding-left: 5px;
+  color: white;
+}
+
+.send-mail button:hover {
+  background-color: #fff;
+  color: #000;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.send-mail button:hover i {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  padding-left: 15px;
+  color: #000;
+}
+
+.send-mail input:focus,
+.send-mail textarea:focus {
+  border-bottom: 1px solid red;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.send-mail input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.send-mail input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+.send-mail input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.send-mail input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.send-mail textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.send-mail textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+
+.send-mail textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.send-mail textarea:focus:-ms-input-placeholder {
+  color: transparent;
 }

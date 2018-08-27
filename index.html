@@ -291,11 +291,23 @@
 
     <footer class="container-fluid flex-container">
         <div class="container">
+            <h3>Contact</h3>
             <div class="contact flex-container">
-                <div class="contact__text col-1-2">
-                    <h3>Contact</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sint unde delectus natus </p>
-                </div>
+                <!-- Start of Send mail form-->
+                <div class="send-mail col-1-2"> 
+                    <form action="mailto:Mbujanauskas@gmail.com" method='post' enctype="text/plain">
+                        <div class="flex-container flex-container--column">
+                            <label for="name">Your name </label>
+                            <input type="text" id="name" placeholder="Enter your name">
+                            <label for="email">Email </label>
+                            <input type="text" id="email" placeholder="Enter your email">
+                            <label for="email-text">Message </label>
+                            <textarea type="textarea" name="email-text" id="email-text" placeholder="Enter your message"></textarea> </textarea>
+                            <button type="submit" class="flex-container">Send <i class="icon-arrow-right2"></i></button>
+                        </div>
+                    </form>
+                </div> 
+               
                 <div class="contact__details flex-container col-1-2">
                     <div>
                         <p><i class="icon-mail3"></i> E-maill address</p>
@@ -307,6 +319,15 @@
                     </div>
                 </div>
             </div> <!--END of contact-->
+            <!-- <div class="form-style-6">
+                <h1>Contact Us</h1>
+                <form>
+                    <input type="text" name="field1" placeholder="Your Name" />
+                    <input type="email" name="field2" placeholder="Email Address" />
+                    <textarea name="field3" placeholder="Type your Message"></textarea>
+                    <input type="submit" value="Send" />
+                </form>
+            </div> -->
         </div>
     </footer>
 
