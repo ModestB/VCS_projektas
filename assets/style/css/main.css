@@ -1463,3 +1463,14 @@ footer h3 {
 .copyright {
   margin: 3.4rem 0;
 }
+
+.skills .progress {
+  padding: 5px;
+  background-color: #797979;
+}
+
+.skills .progress-bar {
+  height: 20px;
+  background-color: #008000;
+  text-align: right;
+}
