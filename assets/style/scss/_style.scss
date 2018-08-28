@@ -1,7 +1,7 @@
 //Variable
 $color-primary: #000;
 $color-secondary: #fff;
-$color-success: #008000;
+$color-success: #2ecc71;
 
 
 @keyframes fadeIn {
@@ -50,8 +50,9 @@ p{
 }
 
 .col-1-2{
-    width: 50%
-}
+    width: 50%;
+    padding-right: 40px;
+};
 
 .col-1-3{
     width: 33.3%;
@@ -835,13 +836,42 @@ footer h3{
 
 // SKILLS
 .skills{
+    margin-top: 6.8rem;
+    .progress-container{
+        h4{
+            text-align: left;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #566366;
+            text-transform: uppercase;
+            
+        }
+       
+    }
     .progress{
-        padding: 5px;
-        background-color: #797979;
+        padding: 4px;
+        margin-bottom: 30px;
+        background-color: #f2f2f2;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    }
+    .progress-bar.flex-container{
+        align-items: center;
+        justify-content: flex-end;
     }
     .progress-bar{
-        height: 20px;
+        height: 40px;
+        //width:75%;
         background-color: $color-success;
-        text-align: right;
+        transition: 0.4s linear;
+        transition-property: width, background-color;
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+
+        p{
+            color: $color-secondary;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding-right: 5px;
+        }
     }
 }

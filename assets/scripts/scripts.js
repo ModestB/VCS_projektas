@@ -62,3 +62,24 @@ const addSlideStyle = function(slideIndex, slides, waitTime){
 window.onscroll = addSticky;
 //addSlide();
 
+
+// ON PAGE LOAD gets .progress-bar p innerText value --> progressText
+// PARSE progressText to integer --> progressAmount
+// CHECKS if progressAmount is NaN
+// UPDATES .progress-bar width with innerText value
+// innerText must be ---> num ===> 75;85;2
+// UPDATES .progress-bar p innerText value
+function progressBarLoader(){
+    const elementsArr = document.querySelectorAll(".progress-bar");
+    elementsArr.forEach((element) => {
+        const  progressText = element.firstElementChild;
+        let progressAmount = parseInt(progressText.innerText);
+
+        isNaN(progressAmount) ? progressAmount = 0 : progressAmount; 
+        element.style.width = `${progressAmount}%`;
+        progressText.innerHTML = progressAmount + '%';   
+    });
+    
+};
+
+progressBarLoader()
