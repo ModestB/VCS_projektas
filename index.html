@@ -26,10 +26,12 @@
                     <div class="flex-container flex__end">
                         <nav>
                             <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Work</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="#about-me">About</a></li>
+                                <li><a href="#skills">Skills</a></li>
+                                <li><a href="#resume">Resume</a></li>                      
+                                <li><a href="#latest-work">Work</a></li>
+                                <li><a href="#latest-blog">Blog</a></li>
+                                <li><a href="#contact">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -46,7 +48,7 @@
     </header>
 
     <!-- About me -->
-    <section class="flex-container flex-container--column about">
+    <section class="flex-container flex-container--column about" id="about-me">
         <div class="container flex-container">
             <div class="col-1-2">
                 <h3>About me</h3>
@@ -87,6 +89,92 @@
     </section> <!-- ABOUT ME END-->
 
 
+    <!-- START of skills-->
+    <section class="skills flex-container" id="skills"> 
+        <div class="container flex-container">
+            <div class="col-1-2">
+                <h3>My skills</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, alias? Aut repellendus inventore minus iste. Vel qui molestiae blanditiis, similique aspernatur deleniti maxime error explicabo delectus vero, accusamus veritatis a!</p>
+            </div>
+            <div class="col-1-2">
+                <div class="progress-container ">
+                    <h4>HTML/CSS</h4>
+                    <div class="progress">
+                        <div class="progress-bar flex-container">
+                            <p>85</p>
+                        </div>
+                    </div>
+                </div>    
+                <div class="progress-container">
+                    <h4>JavaScript</h4>
+                    <div class="progress">
+                        <div class="progress-bar flex-container">
+                            <p>70</p>
+                        </div>
+                    </div>
+                </div>    
+                <div class="progress-container">
+                    <h4>PHP</h4>
+                    <div class="progress">
+                        <div class="progress-bar flex-container">
+                            <p>70</p>
+                        </div>
+                    </div>
+                </div>    
+                <div class="progress-container">
+                    <h4>WordPress</h4>
+                    <div class="progress">
+                        <div class="progress-bar flex-container">
+                            <p>80</p>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+    
+        </div>
+    </section> <!-- END of SKILLS-->
+
+    <!-- START RESUME -->
+    <section class="resume container-fluid flex-container" id="resume">
+        <div class="container flex-container flex-container--column">
+                <h3>Resume</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ratione excepturi consectetur ex architecto eaque modi magni consequatur ullam sint libero inventore aspernatur, autem corporis, eos dolor dolorum </p>
+                <a href="./downloads/window-comp.jpeg" download>Download resume</a>
+        </div>
+    </section> <!-- END RESUME-->
+
+    <!-- START EDUCATION -->
+    <section class="flex-container flex-container--column">
+        <div class="container">
+            <h3>Education</h3>
+        </div>
+        <div class="timeline">
+            <div class="container-timeline left">
+                <div class="content">
+                    <h2>2017</h2>
+                    <h4>Lorem ipsum dolor</h4>
+                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                </div>
+            </div>
+            <div class="container-timeline right">
+                <div class="content">
+                    <h2>2016</h2>
+                    <h4>Lorem ipsum dolor</h4>
+                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                </div>
+            </div>
+            <div class="container-timeline left">
+                <div class="content">
+                    <h2>2015</h2>
+                    <h4>Lorem ipsum dolor</h4>
+                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                </div>
+            </div>
+        </div>
+    </section> <!--END EDUCATION-->
+    
+
+
 
     <!-- NEBAIGTA -->
     <!-- ITERPTI HTML + CSS + JS + logo -->
@@ -110,7 +198,7 @@
 
 
     <!-- LATEST work START-->
-    <section class="latest-work flex-container flex-container--column">
+    <section class="latest-work flex-container flex-container--column" id="latest-work">
         <div class="container">
             <h2>Latest work</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatem placeat minima quas sunt dolorem quisquam voluptatibus sed exercitationem pariatur, nulla nam iste id eos laboriosam laudantium nostrum corporis deserunt.</p>
@@ -232,7 +320,7 @@
 
 
     <!-- START OF LATEST BLOG -->
-    <section class="latest-blog flex-container">
+    <section class="latest-blog flex-container" id="latest-blog">
         <div class="container flex-container flex-wrap">
             <div class="card-main col-3-10">
                 <h3>Latest blog</h3>
@@ -309,91 +397,7 @@
         </div>  
     </section> <!-- END OF LATEST BLOG-->
 
-    <section class="resume container-fluid flex-container">
-        <div class="container flex-container flex-container--column">
-                <h3>Resume</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ratione excepturi consectetur ex architecto eaque modi magni consequatur ullam sint libero inventore aspernatur, autem corporis, eos dolor dolorum </p>
-                <a href="./downloads/window-comp.jpeg" download>Download resume</a>
-        </div>
-    </section>
-
-    <!-- START of skills-->
-    <section class="skills flex-container"> 
-        <div class="container flex-container">
-            <div class="col-1-2">
-                <h3>My skills</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, alias? Aut repellendus inventore minus iste. Vel qui molestiae blanditiis, similique aspernatur deleniti maxime error explicabo delectus vero, accusamus veritatis a!</p>
-            </div>
-            <div class="col-1-2">
-                <div class="progress-container ">
-                    <h4>HTML/CSS</h4>
-                    <div class="progress">
-                        <div class="progress-bar flex-container">
-                            <p>85</p>
-                        </div>
-                    </div>
-                </div>    
-                <div class="progress-container">
-                    <h4>JavaScript</h4>
-                    <div class="progress">
-                        <div class="progress-bar flex-container">
-                            <p>70</p>
-                        </div>
-                    </div>
-                </div>    
-                <div class="progress-container">
-                    <h4>PHP</h4>
-                    <div class="progress">
-                        <div class="progress-bar flex-container">
-                            <p>70</p>
-                        </div>
-                    </div>
-                </div>    
-                <div class="progress-container">
-                    <h4>WordPress</h4>
-                    <div class="progress">
-                        <div class="progress-bar flex-container">
-                            <p>80</p>
-                        </div>
-                    </div>
-                </div>    
-            </div>
- 
-        </div>
-    </section>
-
-    <!-- TIMELINE -->
-    <section class="flex-container flex-container--column">
-        <div class="container">
-            <h3>Education</h3>
-        </div>
-        <div class="timeline">
-            <div class="container-timeline left">
-                <div class="content">
-                    <h2>2017</h2>
-                    <h4>Lorem ipsum dolor</h4>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                </div>
-            </div>
-            <div class="container-timeline right">
-                <div class="content">
-                    <h2>2016</h2>
-                    <h4>Lorem ipsum dolor</h4>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                </div>
-            </div>
-            <div class="container-timeline left">
-                <div class="content">
-                    <h2>2015</h2>
-                    <h4>Lorem ipsum dolor</h4>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <footer class="container-fluid flex-container">
+    <footer class="container-fluid flex-container" id="contact">
         <div class="container">
             <h3>Contact</h3>
             <div class="contact flex-container">

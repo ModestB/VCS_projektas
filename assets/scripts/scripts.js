@@ -83,3 +83,16 @@ function progressBarLoader(){
 };
 
 progressBarLoader()
+
+// function hashJumpFix(){
+//     elements = document.querySelectorAll("nav a");
+//     elements.forEach((element) => {
+//         element.addEventListener("click", () =>{
+//             if (!(element.innerHTML === "Contact")) {
+//                 setTimeout(() => window.scrollBy(0, -110), 10);
+//             }
+//         });
+//     });
+// };
+
+// hashJumpFix();
