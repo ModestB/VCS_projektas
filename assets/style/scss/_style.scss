@@ -875,3 +875,46 @@ footer h3{
         }
     }
 }
+
+// RESUME SECTION
+.resume{
+    position: relative;
+    background-color: #797979;
+    height: 350px;
+
+    &::after{
+        position: absolute;
+        content: "";
+        left: 50%;
+        bottom: -50px;
+        border-width: 25px;
+        border-color: #797979 transparent transparent transparent;
+        border-style: solid;
+        transform: translateX(-50%);
+    }
+    a{
+        padding: 15px 20px;
+        color: $color-secondary;
+        border: 1px solid $color-success;
+        margin-top: 2.5rem;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 700;
+
+        &:hover {
+            background-color: $color-success;
+            transition: 1s;
+        }
+    }
+
+    h3, p{
+        color: $color-secondary;
+    }
+
+    h3{
+        margin-bottom: 2.5rem;
+    }
+    p{
+        text-align: center;
+    }
+}
