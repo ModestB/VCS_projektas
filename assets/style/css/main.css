@@ -631,12 +631,6 @@ p {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.header .flex-container {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
 /* STICKY */
 .sticky {
   position: fixed;
@@ -1579,8 +1573,12 @@ footer h3 {
   color: #fff;
 }
 
-.timeline h2 {
+.timeline h2, .timeline h4 {
   margin-bottom: 1.2rem;
+}
+
+.timeline h4 {
+  color: #797979;
 }
 
 /* The actual timeline (the vertical ruler) */

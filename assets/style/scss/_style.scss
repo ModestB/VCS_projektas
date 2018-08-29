@@ -131,9 +131,9 @@ p{
 }
 
 .header {
-    .flex-container{
-        justify-content: space-between;
-    }
+    // .flex-container{
+    //     justify-content: space-between;
+    // }
 }
 
 /* STICKY */
@@ -933,8 +933,11 @@ footer h3{
     h2, p{
         color: $color-secondary;
     }
-    h2{
+    h2, h4{
         margin-bottom: 1.2rem;
+    }
+    h4{
+        color: #797979;
     }
 }
 
@@ -994,6 +997,7 @@ footer h3{
     border: medium solid $color-primary;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent $color-primary;
+    
 }
 
 /* Add arrows to the right container (pointing left) */
