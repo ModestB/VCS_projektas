@@ -17,18 +17,20 @@
 </head>
 <body>
 
-    <!-- LANDING PAGE -->
+    <!-- ======================================================================= -->
+    <!-- LANDING PAGE + NAV -->
+    <!-- ======================================================================= -->
     <header class="site-header">
         <div class="img-opacity flex-container flex-container--column">
              <!-- Header start-->
             <div class="container-fluid flex-container sticky" id="header">
-                <div class="container header">
+                <div class="container">
                     <div class="flex-container flex__end">
                         <nav>
                             <ul>
                                 <li><a href="#about-me">About</a></li>
                                 <li><a href="#skills">Skills</a></li>
-                                <li><a href="#resume">Resume</a></li>                      
+                                <li><a href="#resume">Resume</a></li>                
                                 <li><a href="#latest-work">Work</a></li>
                                 <li><a href="#latest-blog">Blog</a></li>
                                 <li><a href="#contact">Contact</a></li>
@@ -45,10 +47,13 @@
                 <a href="#">Learn more</a>
             </div>
         </div>
-    </header>
+    </header> <!--LANDING PAGE + NAV END-->
 
-    <!-- About me -->
-    <section class="flex-container flex-container--column about" id="about-me">
+    <!-- =================================================================== -->
+    <!-- ABOUT ME START -->
+    <!-- =================================================================== -->
+    <span class="anchor-fix"  id="about-me"></span>
+    <section class="flex-container flex-container--column about">
         <div class="container flex-container">
             <div class="col-1-2">
                 <h3>About me</h3>
@@ -64,33 +69,37 @@
                 </div>
             </div>
         </div>
-        <div class="about-work container flex-container">
+    </section> <!-- ABOUT ME END-->
+
+    <!-- =================================================================== -->
+    <!-- SECTION HOBBIES START-->
+    <!-- =================================================================== -->
+    <section class="separation hobbies   container-fluid flex-container">
+        <div class="container flex-container">
             <div class="col-1-4">
-                <i class="icon-clipboard"></i>
-                <h4>Plan</h4>
+                <i class="icon-shield"></i>
+                <h4>Values</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum earum</p>
             </div>
             <div class="col-1-4">
-                <i class="icon-pencil2"></i>
-                <h4>Design</h4>
+                <i class="icon-target"></i>
+                <h4>Goals</h4>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non quas consequatur sed cum nisi!</p>
             </div>
             <div class="col-1-4">
-                <i class="icon-wrench"></i>
-                <h4>Develop</h4>
+                <i class="icon-book"></i>
+                <h4>Hobbies</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum earum</p>
             </div>
-            <div class="col-1-4">
-                <i class="icon-rocket"></i>
-                <h4>Lauch</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum earum</p>
-            </div>
-        </div>
-    </section> <!-- ABOUT ME END-->
+        </div>    
+    </section> <!-- Section hobbies end-->
 
 
-    <!-- START of skills-->
-    <section class="skills flex-container" id="skills"> 
+    <!-- =================================================================== -->
+    <!-- SKILLS STARTS-->
+    <!-- =================================================================== -->
+    <span class="anchor-fix" id="skills"></span>
+    <section class="skills flex-container"> 
         <div class="container flex-container">
             <div class="col-1-2">
                 <h3>My skills</h3>
@@ -132,19 +141,24 @@
             </div>
     
         </div>
-    </section> <!-- END of SKILLS-->
+    </section> <!-- SKILLS END-->
 
-    <!-- START RESUME -->
-    <section class="resume container-fluid flex-container" id="resume">
+    <!-- =================================================================== -->
+    <!-- RESUME START -->
+    <!-- =================================================================== -->
+    <span class="anchor-fix"  id="resume"></span>
+    <section class="resume container-fluid flex-container">
         <div class="container flex-container flex-container--column">
                 <h3>Resume</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ratione excepturi consectetur ex architecto eaque modi magni consequatur ullam sint libero inventore aspernatur, autem corporis, eos dolor dolorum </p>
                 <a href="./downloads/window-comp.jpeg" download>Download resume</a>
         </div>
-    </section> <!-- END RESUME-->
+    </section> <!--RESUME END-->
 
-    <!-- START EDUCATION -->
-    <section class="flex-container flex-container--column">
+    <!-- =================================================================== -->
+    <!-- EDUCATION START -->
+    <!-- =================================================================== -->
+    <section class="flex-container flex-container--column education">
         <div class="container">
             <h3>Education</h3>
         </div>
@@ -171,34 +185,72 @@
                 </div>
             </div>
         </div>
-    </section> <!--END EDUCATION-->
+    </section> <!--EDUCATION END-->
     
-
-
-
-    <!-- NEBAIGTA -->
-    <!-- ITERPTI HTML + CSS + JS + logo -->
-    <!-- SEPARATION -->
-    <section class="separation  container-fluid flex-container">
-        <div class="container container-small flex-container">
-            <div class="col-1-4">
-                <i class="icon-html-five"></i>
-                <h4>HTML</h4>
-            </div>
-            <div class="col-1-4">
-                <i class="icon-css3"></i>
-                <h4>CSS</h4>
-            </div>
-            <div class="col-1-4">
-                <i class="icon-javascript"></i>
-                <h4>JavaScript</h4>
+    <!-- =================================================================== -->
+    <!-- QUOTES SEPARATION -->
+    <!-- =================================================================== -->
+    <section class="separation separation-quotes  container-fluid flex-container">
+        <div class="container">
+            <div class= "swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide ONE -->
+                    <div class="swiper-slide">
+                        <div class="flex-container ">
+                            <div class="col-1-4  flex-container flex-container--column">
+                                    <img src="optimize_img/person.jpeg" alt="">
+                                    <p>One</p>
+                            </div>
+                            <div class="col-3-5">
+                                <blockquote>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! Id porro nostrum ratione.</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide TWO -->
+                    <div class="swiper-slide">
+                        <div class="flex-container">
+                            <div class="col-1-4 flex-container flex-container--column"> 
+                                    <img src="optimize_img/person.jpeg" alt="">
+                                    <p>Two</p>
+                            </div>
+                            <div class="col-3-5">
+                                <blockquote>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! ab.</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide Three -->
+                    <div class="swiper-slide">
+                        <div class="flex-container">
+                            <div class="col-1-4  flex-container flex-container--column">
+                                    <img src="optimize_img/person.jpeg" alt="">
+                                    <p>Three</p>
+                            </div>
+                            <div class="col-3-5">
+                                <blockquote>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! ab.</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination-white"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
             </div>
         </div>
-    </section>
+    </section>  <!-- QUOTES SEPARATION END-->
 
-
-    <!-- LATEST work START-->
-    <section class="latest-work flex-container flex-container--column" id="latest-work">
+    <!-- =================================================================== -->
+    <!-- LATEST WORK START -->
+    <!-- =================================================================== -->
+    <span class="anchor-fix"  id="latest-work"></span>
+    <section class="latest-work flex-container flex-container--column">
         <div class="container">
             <h2>Latest work</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatem placeat minima quas sunt dolorem quisquam voluptatibus sed exercitationem pariatur, nulla nam iste id eos laboriosam laudantium nostrum corporis deserunt.</p>
@@ -259,68 +311,41 @@
         <div class="container view-more flex-container flex__end">
             <a href="#">View more <i class="icon-arrow-right2"></i></a>   
         </div>
-    </section> <!-- LATEST work END-->
+    </section> <!-- LATEST WORK END-->
         
-    <!-- QUOTES SEPARATION-->
-    <section class="separation separation-quotes  container-fluid flex-container">
-        <div class="container">
-            <div class= "swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- Slide ONE -->
-                    <div class="swiper-slide">
-                        <div class="flex-container ">
-                            <div class="col-1-4  flex-container flex-container--column">
-                                    <img src="optimize_img/person.jpeg" alt="">
-                                    <p>One</p>
-                            </div>
-                            <div class="col-3-5">
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! Id porro nostrum ratione.</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide TWO -->
-                    <div class="swiper-slide">
-                        <div class="flex-container">
-                            <div class="col-1-4 flex-container flex-container--column"> 
-                                    <img src="optimize_img/person.jpeg" alt="">
-                                    <p>Two</p>
-                            </div>
-                            <div class="col-3-5">
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! ab.</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide Three -->
-                    <div class="swiper-slide">
-                        <div class="flex-container">
-                            <div class="col-1-4  flex-container flex-container--column">
-                                    <img src="optimize_img/person.jpeg" alt="">
-                                    <p>Three</p>
-                            </div>
-                            <div class="col-3-5">
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati facere eius expedita ut, quibusdam odit quo reiciendis, fugiat nihil numquam distinctio architecto voluptatum dolore quos! ab.</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination swiper-pagination-white"></div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next swiper-button-white"></div>
-                <div class="swiper-button-prev swiper-button-white"></div>
+    <!-- =================================================================== -->
+    <!-- SEPARATION -->
+    <!-- =================================================================== -->
+    <section class="separation  container-fluid flex-container">
+        <div class="about-work container flex-container">
+            <div class="col-1-4">
+                <i class="icon-clipboard"></i>
+                <h4>Plan</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum earum</p>
+            </div>
+            <div class="col-1-4">
+                <i class="icon-pencil2"></i>
+                <h4>Design</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non quas consequatur sed cum nisi!</p>
+            </div>
+            <div class="col-1-4">
+                <i class="icon-wrench"></i>
+                <h4>Develop</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum earum</p>
+            </div>
+            <div class="col-1-4">
+                <i class="icon-rocket"></i>
+                <h4>Lauch</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum earum</p>
             </div>
         </div>
-    </section>  <!-- QUOTES SEPARATION END-->
+    </section> <!-- SEPARATION END-->
 
-
-    <!-- START OF LATEST BLOG -->
-    <section class="latest-blog flex-container" id="latest-blog">
+    <!-- =================================================================== -->
+    <!-- LATEST BLOG START -->
+    <!-- =================================================================== -->
+    <span class="anchor-fix" id="latest-blog"></span>
+    <section class="latest-blog flex-container">
         <div class="container flex-container flex-wrap">
             <div class="card-main col-3-10">
                 <h3>Latest blog</h3>
@@ -395,8 +420,11 @@
                 </div> <!-- end of controller-container -->                
             </div>
         </div>  
-    </section> <!-- END OF LATEST BLOG-->
+    </section> <!-- LATEST BLOG END-->
 
+    <!-- =================================================================== -->
+    <!-- FOOTER START -->
+    <!-- =================================================================== -->
     <footer class="container-fluid flex-container" id="contact">
         <div class="container">
             <h3>Contact</h3>
@@ -434,7 +462,7 @@
                 <p>&#9400 2018</p>
             </div>
         </div>
-    </footer>
+    </footer> 
 
 
 

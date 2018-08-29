@@ -36,7 +36,10 @@
   .icon-rocket,
   .icon-html-five,
   .icon-css3,
-  .icon-javascript{
+  .icon-javascript,
+  .icon-shield,
+  .icon-target,
+  .icon-book{
     display: block;  
     font-size: 3.8rem;
     margin-bottom: 35px;
@@ -101,4 +104,13 @@
   }
   .icon-javascript:before {
     content: "\e900";
+  }
+  .icon-shield:before {
+    content: "\e9b4";
+  }
+  .icon-target:before {
+    content: "\e9b3";
+  }
+  .icon-book:before {
+    content: "\e91f";
   }
