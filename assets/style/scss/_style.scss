@@ -31,7 +31,7 @@ $color-success: #2ecc71;
     box-sizing: border-box;
 }
 html{
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
     font-size: 16px;
 }
 body{
@@ -121,12 +121,12 @@ p{
     justify-content: flex-end;
 }
 
-.anchor-fix{
-    display: block;
-    height: 20px;
-    margin-top: -20px; 
-    visibility: hidden;
-}
+// .anchor-fix{
+//     display: block;
+//     height: 20px;
+//     margin-top: -20px; 
+//     visibility: hidden;
+// }
 
 /* ========================================================================== */
 /* LANDING PAGE + NAV START */

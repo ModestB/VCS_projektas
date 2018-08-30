@@ -527,7 +527,6 @@ li {
 }
 
 html {
-  scroll-behavior: smooth;
   font-size: 16px;
 }
 
@@ -635,13 +634,6 @@ p {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-}
-
-.anchor-fix {
-  display: block;
-  height: 20px;
-  margin-top: -20px;
-  visibility: hidden;
 }
 
 /* ========================================================================== */
