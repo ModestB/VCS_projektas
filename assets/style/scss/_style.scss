@@ -132,7 +132,8 @@ p{
 /* LANDING PAGE + NAV START */
 /* ========================================================================== */
 .site-header{ 
-    background-image: url("../../../optimize_img/window-comp.jpeg");
+    //background-image: url("../../../optimize_img/window-comp.jpeg");
+    background-color: $color-primary;
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -140,7 +141,7 @@ p{
 
 .img-opacity{
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, .3);
+    //background-color: rgba(0, 0, 0, .3);
 }
 
 /* STICKY */
@@ -919,7 +920,7 @@ blockquote {
 /* FOOTES START */
 /* ========================================================================== */
 footer {
-    height: 100vh;
+    min-height: 100vh;
     margin-top: 8rem;
     background-color: $color-primary;
     color: $color-secondary;

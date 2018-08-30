@@ -84,6 +84,9 @@ function progressBarLoader(){
 
 progressBarLoader()
 
+// =============================================================================
+// RETURN current page y position
+// =============================================================================
 function currentYPosition() {
     // Firefox, Chrome, Opera, Safari
     if (self.pageYOffset) return self.pageYOffset;
@@ -95,6 +98,9 @@ function currentYPosition() {
     return 0;
 }
 
+// =============================================================================
+// RETURN elements with eID y position
+// =============================================================================
 function elmYPosition(eID) {
     var elm = document.querySelector(eID);
     var y = elm.offsetTop;
@@ -106,6 +112,17 @@ function elmYPosition(eID) {
     return y; 
 }
 
+// =============================================================================
+// ADD smooth scrolling to element with eID
+// DECREMENT stopY position by 110px ---> fixes navbar overlaping section
+//           except for element with id = #contact
+// DETERMENT distance to scroll
+//           then distance is < 100px jumps without smooth scrolling
+// DETERMENT speed with limit = 20 
+// DETERMENT step size --> distance to jump each time the visible top of page 
+//           Y coordinate is changed
+// DETERMENT leapY next coordinate to jump to
+// =============================================================================
 function smoothScroll(eID) {
     var startY = currentYPosition();
     var stopY = elmYPosition(eID);
@@ -114,25 +131,40 @@ function smoothScroll(eID) {
     }
     var distance = stopY > startY ? stopY - startY : startY - stopY;
     if (distance < 100) {
-        scrollTo(0, stopY); return;
+        scrollTo(0, stopY); 
+        return;
     }
     var speed = Math.round(distance / 100);
     if (speed >= 20) speed = 20;
     var step = Math.round(distance / 25);
     var leapY = stopY > startY ? startY + step : startY - step;
     var timer = 0;
+
+    // PERFORMS downward scroll
     if (stopY > startY) {
-        for ( var i=startY; i<stopY; i+=step ) {
+        for (var i = startY; i < stopY; i += step) {
             setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-            leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-        } return;
+            leapY += step;
+            if (leapY > stopY) leapY = stopY;
+            timer++;
+        } 
+        return;
     }
-    for ( var i=startY; i>stopY; i-=step ) {
+    // PERFORMS upward scroll
+    for (var i = startY; i > stopY; i -= step) {
         setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-        leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+        leapY -= step; 
+        if (leapY < stopY) leapY = stopY;
+        timer++;
     }
 }
 
+// =============================================================================
+// ADD all anchor elements in nav tag to elements ARRAY
+// ADD eventListener "click" forEach element in elements ARRAY
+// ONCLICK determine element ID ---> eID by getting element attribute href
+// ADD smoothScroll
+// =============================================================================
 function addSmoothScroll(){
     elements = document.querySelectorAll("nav a");
     elements.forEach((element) => {

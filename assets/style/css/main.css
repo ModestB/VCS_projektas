@@ -640,7 +640,7 @@ p {
 /* LANDING PAGE + NAV START */
 /* ========================================================================== */
 .site-header {
-  background-image: url("../../../optimize_img/window-comp.jpeg");
+  background-color: #000;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -648,7 +648,6 @@ p {
 
 .img-opacity {
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* STICKY */
@@ -1526,7 +1525,7 @@ blockquote p {
 /* FOOTES START */
 /* ========================================================================== */
 footer {
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 8rem;
   background-color: #000;
   color: #fff;
