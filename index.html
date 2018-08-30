@@ -20,9 +20,8 @@
     <!-- ======================================================================= -->
     <!-- LANDING PAGE + NAV -->
     <!-- ======================================================================= -->
-    <header class="site-header"">
-        <div class="img-opacity flex-container flex-container--column">
-             <!-- Header start-->
+    <header id="particles-js" class="flex-container flex-container--column" >
+        <div class="flex-container">
             <div class="container-fluid flex-container sticky" id="header">
                 <div class="container">
                     <div class="flex-container flex__end">
@@ -38,16 +37,14 @@
                         </nav>
                     </div>
                 </div>
-            </div> <!--Header end -->
-           
-            <!-- Hero page -->
-            <div class="container hero">
-                <h1>Creative Template</h1>
-                <h2>Lorem ipsum dolor</h2>
-                <a href="#">Learn more</a>
             </div>
         </div>
-    </header> <!--LANDING PAGE + NAV END-->
+        <div class="container hero">
+            <h1>Creative Template</h1>
+            <h2>Lorem ipsum dolor</h2>
+            <a href="#">Learn more</a>
+        </div>
+    </header>
 
     <!-- =================================================================== -->
     <!-- ABOUT ME START -->
@@ -495,5 +492,12 @@
             });
         });
   </script>
+   <script src="./assets/scripts/particle/particles.min.js"></script>
+   <script>
+       /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+         particlesJS.load('particles-js', './assets/scripts/particle/particles.json', function() {
+         console.log('callback - particles.js config loaded');
+         });
+   </script>
 </body>
 </html>

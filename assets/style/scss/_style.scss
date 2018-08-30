@@ -131,27 +131,47 @@ p{
 /* ========================================================================== */
 /* LANDING PAGE + NAV START */
 /* ========================================================================== */
-.site-header{ 
-    //background-image: url("../../../optimize_img/window-comp.jpeg");
+
+#particles-js{
+    opacity: 0.99;
+    min-height: 100vh;
     background-color: $color-primary;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+    
+}
+#particles-js canvas {
+    z-index: -1;
+    position: absolute;
+    display: block;
+    vertical-align: bottom;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
 }
 
-.img-opacity{
-    min-height: 100vh;
-    //background-color: rgba(0, 0, 0, .3);
-}
+
+// .site-header{ 
+//     //background-image: url("../../../optimize_img/window-comp.jpeg");
+//     background-color: $color-primary;
+//     background-size: cover;
+//     background-position: center;
+//     width: 100%;
+// }
+
+// .img-opacity{
+//     min-height: 100vh;
+//     //background-color: rgba(0, 0, 0, .3);
+// }
 
 /* STICKY */
 .sticky{
     position: fixed;
     justify-content: center;
     top: 0;
+    z-index: 2;
 }
 .sticky-background{
-    z-index: 1;
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
 }
