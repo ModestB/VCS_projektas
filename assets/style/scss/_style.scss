@@ -401,6 +401,9 @@ nav {
 /* ========================================================================== */
 .education {
     margin-top: 6.8rem;
+    h3{
+        text-align: center;
+    }
 }
 
 //TIMELINE SECTION
@@ -408,10 +411,11 @@ nav {
 .timeline {
     position: relative;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 
     h2, p{
-        color: $color-secondary;
+        color: $color-primary;
     }
     h2, h4{
         margin-bottom: 1.2rem;
@@ -435,7 +439,7 @@ nav {
 
 /* Container around content */
 .container-timeline {
-    padding: 10px 40px;
+    padding: 10px 0;
     position: relative;
     background-color: inherit;
     width: 50%;
@@ -458,40 +462,12 @@ nav {
 /* Place the container to the left */
 .left {
     left: 0;
+    
 }
 
 /* Place the container to the right */
 .right {
     left: 50%;
-}
-
-/* Add arrows to the left container (pointing right) */
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid $color-primary;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent $color-primary;
-    
-}
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid $color-primary;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent $color-primary transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -502,11 +478,24 @@ nav {
 /* The actual content */
 .content {
     padding: 20px 30px;
-    background-color: $color-primary;
+    background-color: $color-grey;
     position: relative;
     border-radius: 6px;
-} /* EDUCATION END*/
-
+} 
+.year.flex-container{
+    margin: 0 auto;
+    background-color: $color-success;
+    max-width: 200px;
+    max-height: 50px;
+    align-items: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 10px 20px;
+    h2{
+        margin-bottom: 0;
+        color: $color-primary;
+    }
+}/* EDUCATION END*/
 
 /* ========================================================================== */
 /* QUOTES SEPARATION */
