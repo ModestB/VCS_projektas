@@ -132,44 +132,29 @@ p{
 /* LANDING PAGE + NAV START */
 /* ========================================================================== */
 
+header{
+    background-color: $color-primary; 
+}
 #particles-js{
-    opacity: 0.99;
+    // opacity: 0.99;
     min-height: 100vh;
-    background-color: $color-primary;
+    //background-color: $color-primary;
     
 }
 #particles-js canvas {
-    z-index: -1;
+    z-index: 0;
     position: absolute;
     display: block;
-    vertical-align: bottom;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
-    transition: opacity .8s ease, transform 1.4s ease
+    //background-color: $color-primary;
 }
 
-
-// .site-header{ 
-//     //background-image: url("../../../optimize_img/window-comp.jpeg");
-//     background-color: $color-primary;
-//     background-size: cover;
-//     background-position: center;
-//     width: 100%;
-// }
-
-// .img-opacity{
-//     min-height: 100vh;
-//     //background-color: rgba(0, 0, 0, .3);
-// }
 
 /* STICKY */
 .sticky{
     position: fixed;
     justify-content: center;
     top: 0;
-    z-index: 2;
+    z-index: 100;
 }
 .sticky-background{
     background-color: rgba(0, 0, 0, 0.4);
@@ -178,6 +163,7 @@ p{
 
 /* Navigation */
 nav {
+
     li{
         float: left;
     }
@@ -206,6 +192,7 @@ nav {
         padding-bottom: 0.3rem;
         margin-bottom: 3.125rem;
         font-family: 'Kaushan Script', cursive;
+        user-select: none;
     }
 
     h2{
@@ -214,6 +201,7 @@ nav {
         font-weight: 700;
         letter-spacing: 0.02rem;
         padding-bottom: 0.25rem;
+        user-select: none;
 
         &::after{
             display: block;
@@ -233,6 +221,8 @@ nav {
         padding: 0.75rem 1.5rem;
         color: white;
         border: 1px solid white;
+        position: relative;
+        z-index: 1;
 
         &:hover{
             background-color:  white;
