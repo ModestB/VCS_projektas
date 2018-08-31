@@ -114,7 +114,7 @@ function elmYPosition(eID) {
 
 // =============================================================================
 // ADD smooth scrolling to element with eID
-// DECREMENT stopY position by 110px ---> fixes navbar overlaping section
+// DECREMENT stopY position by navHeigh * 1.5 ---> fixes navbar overlaping section
 //           except for element with id = #contact
 // DETERMENT distance to scroll
 //           then distance is < 100px jumps without smooth scrolling
@@ -126,14 +126,15 @@ function elmYPosition(eID) {
 function smoothScroll(eID) {
     var startY = currentYPosition();
     var stopY = elmYPosition(eID);
+    var navHeigh = document.querySelector("nav").clientHeight;
     if(eID !== '#contact') {
-        stopY = stopY - 110;
+        stopY = stopY - navHeigh * 1.5;
     }
     var distance = stopY > startY ? stopY - startY : startY - stopY;
     if (distance < 100) {
-        scrollTo(0, stopY); 
+        scrollTo(0, 100);
         return;
-    }
+    } 
     var speed = Math.round(distance / 100);
     if (speed >= 20) speed = 20;
     var step = Math.round(distance / 25);
