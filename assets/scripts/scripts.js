@@ -126,13 +126,13 @@ function elmYPosition(eID) {
 function smoothScroll(eID) {
     var startY = currentYPosition();
     var stopY = elmYPosition(eID);
-    var navHeigh = document.querySelector("nav").clientHeight;
+    //var navHeigh = document.querySelector("nav").clientHeight;
     if(eID !== '#contact') {
-        stopY = stopY - navHeigh * 1.5;
+        stopY = stopY - 120;
     }
     var distance = stopY > startY ? stopY - startY : startY - stopY;
     if (distance < 100) {
-        scrollTo(0, 100);
+        scrollTo(0, stopY);
         return;
     } 
     var speed = Math.round(distance / 100);
@@ -169,7 +169,8 @@ function smoothScroll(eID) {
 function addSmoothScroll(){
     elements = document.querySelectorAll("nav a");
     elements.forEach((element) => {
-        element.addEventListener("click", () =>{
+        element.addEventListener("click", (event) =>{
+            event.preventDefault();
             eID = element.getAttribute('href');
             smoothScroll(eID); 
         });
@@ -177,3 +178,34 @@ function addSmoothScroll(){
 };
 
 addSmoothScroll();
+
+
+//BURGER
+
+function responsiveMenu(){
+    nav = document.querySelector("nav");
+    burgerIcon = document.querySelector(".burger")
+
+    burgerIcon.addEventListener('click', (event) => {
+        event.preventDefault();
+        nav.classList.toggle('responsive');
+    })
+
+    // navElements = document.querySelectorAll("nav a");
+    // navElements.forEach((element) => {
+    //     element.addEventListener('click', () => {
+    //         nav.classList.toggle('responsive');
+    //         console.log("click") 
+    //     })
+    // })
+
+    window.addEventListener('scroll', () => {
+        nav.classList.remove('responsive');
+    })
+
+
+
+
+};
+
+responsiveMenu();

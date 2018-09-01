@@ -391,12 +391,21 @@ li {
   margin-bottom: 35px;
 }
 
+.icon-menu {
+  display: block;
+  font-size: 1.8rem;
+}
+
 .icon-html-five,
 .icon-css3,
 .icon-javascript,
 .icon-phone,
 .icon-mail3 {
   color: white;
+}
+
+.icon-menu {
+  color: #2ecc71;
 }
 
 .icon-clock {
@@ -477,6 +486,10 @@ li {
 
 .icon-book:before {
   content: "\e91f";
+}
+
+.icon-menu:before {
+  content: "\e9bd";
 }
 
 /* ========================================================================== */
@@ -667,6 +680,14 @@ header {
   width: 100%;
 }
 
+.burger {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: none;
+}
+
 /* Navigation */
 nav li {
   float: left;
@@ -782,7 +803,7 @@ nav a:hover {
 /* SEPARATION */
 /* ========================================================================== */
 .separation {
-  height: 350px;
+  min-height: 350px;
   margin-top: 6.8rem;
   background-color: #f2f2f1;
   color: #000;
@@ -1720,7 +1741,111 @@ footer h3 {
 /* MEDIA QUERIES */
 /* ========================================================================== */
 /* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+  h1, h2, h3, h4, a, nav, p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .container > div {
+    width: 100%;
+  }
+  h4 {
+    margin-bottom: 2rem;
+  }
+  i {
+    margin-bottom: 1.2rem;
+  }
+  p {
+    margin-bottom: 1.5rem;
+  }
+  /*NAVBAR ___ BURGER */
+  .sticky-background {
+    background-color: transparent;
+  }
+  .burger {
+    display: initial;
+  }
+  nav {
+    display: none;
+  }
+  .responsive {
+    margin-top: 75px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 250px;
+  }
+  .responsive::before {
+    content: '';
+    position: relative;
+    top: -140px;
+    left: 200px;
+    display: block;
+    border-width: 15px;
+    border-color: transparent transparent #2ecc71 transparent;
+    border-style: solid;
+  }
+  .responsive ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .responsive li {
+    background-color: #2ecc71;
+    border-top: 1px solid #25a25a;
+  }
+  .responsive li:first-of-type {
+    border-top-left-radius: 5px;
+  }
+  .responsive li:last-of-type {
+    border-bottom-left-radius: 5px;
+    border-bottom: 1px solid #25a25a;
+  }
+  .responsive a {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #000;
+    padding: 10px 20px;
+    text-align: left;
+    border-bottom: none;
+  }
+  .responsive a:hover {
+    border-bottom: none;
+  }
+  /* ABOUT ME*/
+  .about .self-img {
+    display: none;
+  }
+  .about a {
+    margin: 5px;
+  }
+  /* SKILLS */
+  .progress-bar > p {
+    margin: 0;
+  }
+  /* QOUTES */
+  .slide-img {
+    display: none;
+  }
+  .slide-qoute {
+    width: 85%;
+  }
+  /* TIMELINE */
   /* Place the timelime to the left */
   .timeline::after {
     left: 31px;
