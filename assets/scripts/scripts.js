@@ -209,3 +209,20 @@ function responsiveMenu(){
 };
 
 responsiveMenu();
+
+
+function responsiveCards() {
+    let elementArr = document.querySelectorAll('.small');
+    elementArr.forEach((element) => {
+        element.addEventListener('mouseenter', () =>{
+        element.classList.remove('card--small');
+        element.classList.add('card--big');
+        });
+
+        element.addEventListener('mouseleave', () =>{
+        element.classList.remove('card--big');
+        element.classList.add('card--small');
+        });
+    });
+}
+responsiveCards()

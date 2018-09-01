@@ -1216,6 +1216,40 @@ footer h3{
     .right {
         left: 0%;
     }
+
+
+    /* LATEST BLOG*/
+
+    .latest-blog{
+        .card-main{
+            width:100%;
+            max-width: 100%;
+
+            h3, p{
+                text-align: center;
+            }
+        }
+    }
+
+    /* CONTACT*/
+
+    .contact{
+        .send-mail{
+            margin: 0 10px;
+            width: 100%;
+            button{
+                align-items: center;
+            }
+            i{
+                margin:0;
+            }
+        }
+        .contact__details{
+            margin-top: 4rem;
+            width: 100%;
+            justify-content: center;
+        }
+    }
 }
 
 

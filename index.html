@@ -323,7 +323,7 @@
     <!-- SEPARATION -->
     <!-- =================================================================== -->
     <section class="separation  container-fluid flex-container">
-        <div class="container flex-container">
+        <div class="container flex-container flex-wrap">
             <div class="col-1-4">
                 <i class="icon-clipboard"></i>
                 <h4>Plan</h4>
@@ -433,7 +433,7 @@
     <footer class="container-fluid flex-container" id="contact">
         <div class="container">
             <h3>Contact</h3>
-            <div class="contact flex-container">
+            <div class="contact flex-container flex-wrap">
                 <!-- Start of Send mail form-->
                 <div class="send-mail col-1-2"> 
                     <form action="mailto:Mbujanauskas@gmail.com" method='post' enctype="text/plain">
@@ -489,20 +489,6 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        });
-  </script>
-  <script>
-        let elementArr = document.querySelectorAll('.small');
-        elementArr.forEach((element) => {
-            element.addEventListener('mouseenter', () =>{
-            element.classList.remove('card--small');
-            element.classList.add('card--big');
-            });
-
-            element.addEventListener('mouseleave', () =>{
-            element.classList.remove('card--big');
-            element.classList.add('card--small');
-            });
         });
   </script>
    <script src="./assets/scripts/particle/particles.min.js"></script>

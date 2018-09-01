@@ -1871,4 +1871,32 @@ footer h3 {
   .right {
     left: 0%;
   }
+  /* LATEST BLOG*/
+  .latest-blog .card-main {
+    width: 100%;
+    max-width: 100%;
+  }
+  .latest-blog .card-main h3, .latest-blog .card-main p {
+    text-align: center;
+  }
+  /* CONTACT*/
+  .contact .send-mail {
+    margin: 0 10px;
+    width: 100%;
+  }
+  .contact .send-mail button {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .contact .send-mail i {
+    margin: 0;
+  }
+  .contact .contact__details {
+    margin-top: 4rem;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
