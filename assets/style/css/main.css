@@ -1185,14 +1185,14 @@ blockquote p {
   transition: ease-in-out 0.5s;
 }
 
-.card__container .card--text--test h2 {
+.card__container .card__text h2 {
   font-size: 24px;
   padding: 0 16px;
   font-weight: 400;
   margin-bottom: 16px;
 }
 
-.card__container .card--text--test p {
+.card__container .card__text p {
   font-size: 14px;
   padding: 16px 0;
   line-height: 1.6;
@@ -1201,13 +1201,13 @@ blockquote p {
   text-align: center;
 }
 
-.card__container .test-subtitle {
+.card__container .cadr__subtitle {
   width: 100%;
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.card__container .card--action--bar {
+.card__container .card__actionbar {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1221,7 +1221,7 @@ blockquote p {
   height: 40px;
 }
 
-.card__container .card--action--bar .test_button {
+.card__container .card__actionbar .card__button {
   background-color: #f2f2f1;
   width: 100%;
   display: block;
@@ -1231,7 +1231,7 @@ blockquote p {
   border-left: 1px solid #E0E0E0;
 }
 
-.card__container .card--action--bar .test_button:hover {
+.card__container .card__actionbar .card__button:hover {
   background-color: #2ecc71;
 }
 
@@ -1240,7 +1240,7 @@ blockquote p {
   transform: translate3d(0, -5px, 0);
 }
 
-.flex-container.test-subtitle {
+.flex-container.card__subtitle {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1269,33 +1269,33 @@ footer .container {
   align-items: flex-start;
 }
 
-.contact__text {
+.contact .contact__text {
   text-align: left;
 }
 
-.contact__text h2, .contact p {
+.contact .contact__text h2, .contact p {
   color: #fff;
 }
 
-.contact__text h2 {
+.contact .contact__text h2 {
   font-size: 1.875rem;
   margin-bottom: 3.125rem;
 }
 
-.contact__text p {
+.contact .contact__text p {
   margin-right: 7rem;
 }
 
-.contact__details {
+.contact .contact__details {
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
-.contact__details i {
+.contact .contact__details i {
   margin-right: 1.2rem;
 }
 
-.contact__details div > p:nth-child(1) {
+.contact .contact__details div > p:nth-child(1) {
   margin-bottom: 2rem;
 }
 
@@ -1464,7 +1464,7 @@ footer h3 {
 /* ========================================================================== */
 /* MEDIA QUERIES */
 /* ========================================================================== */
-/* Media queries - Responsive timeline on screens less than 768px wide */
+/* Responsive timeline on screens less than 768px wide */
 @media screen and (max-width: 768px) {
   .container > div {
     width: 100%;

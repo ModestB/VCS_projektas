@@ -199,7 +199,7 @@ responsiveMenu();
 
 
 function cardTextAdjust() {
-    textElArr = document.querySelectorAll(".card__text");
+    textElArr = document.querySelectorAll(".card__text p");
     textElArr.forEach((textEl) => {
         let text = textEl.innerHTML;
         if(text.length > 80){
