@@ -196,3 +196,15 @@ function responsiveMenu(){
 };
 
 responsiveMenu();
+
+
+function cardTextAdjust() {
+    textElArr = document.querySelectorAll(".card__text");
+    textElArr.forEach((textEl) => {
+        let text = textEl.innerHTML;
+        if(text.length > 80){
+            textEl.innerHTML = `${text.substring(0, 80)}...`    
+        }   
+    })
+}
+cardTextAdjust()
