@@ -190,39 +190,9 @@ function responsiveMenu(){
         event.preventDefault();
         nav.classList.toggle('responsive');
     })
-
-    // navElements = document.querySelectorAll("nav a");
-    // navElements.forEach((element) => {
-    //     element.addEventListener('click', () => {
-    //         nav.classList.toggle('responsive');
-    //         console.log("click") 
-    //     })
-    // })
-
     window.addEventListener('scroll', () => {
         nav.classList.remove('responsive');
     })
-
-
-
-
 };
 
 responsiveMenu();
-
-
-function responsiveCards() {
-    let elementArr = document.querySelectorAll('.small');
-    elementArr.forEach((element) => {
-        element.addEventListener('mouseenter', () =>{
-        element.classList.remove('card--small');
-        element.classList.add('card--big');
-        });
-
-        element.addEventListener('mouseleave', () =>{
-        element.classList.remove('card--big');
-        element.classList.add('card--small');
-        });
-    });
-}
-responsiveCards()

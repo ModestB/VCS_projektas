@@ -38,11 +38,17 @@ html{
 body{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, p {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 p{
     text-align: center;
 }
+
 
 .container-fluid{
     width: 100%;
@@ -391,11 +397,11 @@ nav {
         font-size: 1.2rem;
         font-weight: 700;
 
-        &:hover {
-            background-color: $color-success;
-            color: $color-primary;
-            transition: 1s;
-        }
+        // &:hover {
+        //     background-color: $color-success;
+        //     color: $color-primary;
+        //     transition: 1s;
+        // }
     }
     h3{
         margin-bottom: 2rem;
@@ -484,7 +490,7 @@ nav {
 
 /* The actual content */
 .content {
-    padding: 20px 30px;
+    padding: 20px 0;
     background-color: $color-grey;
     position: relative;
     border-radius: 6px;
@@ -616,51 +622,51 @@ blockquote {
         width: 100%;
         height: auto;
     }
-    .overlay{
-        position: absolute;
-        bottom: 100%;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.6);
-        overflow: hidden;
-        width: 100%;
-        height:0;
-        transition: .4s ease;
-    }
-    &:hover{
-        -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
-        box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.75);
-        transition: .4s ease;
-    }
-    // ONHOVER adds SHADOW
-    &:hover .overlay {
-        bottom: 0;
-        height: 100%;
-    }
-    // ONHOVER makes card bigger
-    &:hover .overlay,
-    &:hover img{
-        transform: scale(1.05);
-        transition: .4s ease;
-    }
+    // .overlay{
+    //     position: absolute;
+    //     bottom: 100%;
+    //     left: 0;
+    //     right: 0;
+    //     background-color: rgba(0, 0, 0, 0.6);
+    //     overflow: hidden;
+    //     width: 100%;
+    //     height:0;
+    //     transition: .4s ease;
+    // }
+    // &:hover{
+    //     -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+    //     -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+    //     box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.75);
+    //     transition: .4s ease;
+    // }
+    // // ONHOVER adds SHADOW
+    // &:hover .overlay {
+    //     bottom: 0;
+    //     height: 100%;
+    // }
+    // // ONHOVER makes card bigger
+    // &:hover .overlay,
+    // &:hover img{
+    //     transform: scale(1.05);
+    //     transition: .4s ease;
+    // }
 
-    .inner__block {
-        white-space: nowrap; 
-        color: white;
-        font-size: 3rem;
-        position: absolute;
-        overflow: hidden;
-        top: 50%;
-        left: 50%;
-        transition: 5s;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -webkit-margin-before: 0px;
-        -webkit-margin-after: 0px;
-        -webkit-margin-start: 0px;
-        -webkit-margin-end: 0px;
-    } 
+    // .inner__block {
+    //     white-space: nowrap; 
+    //     color: white;
+    //     font-size: 3rem;
+    //     position: absolute;
+    //     overflow: hidden;
+    //     top: 50%;
+    //     left: 50%;
+    //     transition: 5s;
+    //     transform: translate(-50%, -50%);
+    //     -ms-transform: translate(-50%, -50%);
+    //     -webkit-margin-before: 0px;
+    //     -webkit-margin-after: 0px;
+    //     -webkit-margin-start: 0px;
+    //     -webkit-margin-end: 0px;
+    // } 
 }// END of Latest work CARDS img inner code
 
 // VIEW MORE
@@ -675,15 +681,15 @@ blockquote {
             margin-left: 25px;
         }
 
-        &:hover{
-            background-color: $color-success;
-            color: $color-secondary;
-            i{
-                color: $color-secondary;
-                transition: 0.5s;
-                margin-left: 35px;
-            }
-        }
+        // &:hover{
+        //     background-color: $color-success;
+        //     color: $color-secondary;
+        //     i{
+        //         color: $color-secondary;
+        //         transition: 0.5s;
+        //         margin-left: 35px;
+        //     }
+        // }
     }     
 } /*END OF LATEST WORK*/
 
@@ -891,43 +897,43 @@ blockquote {
   .card--big .card__action-bar {
     left: 0;
   }
-  .card--small {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-    height: 136px;
-    min-height: 136px;
-    transition: 0.5s;
-  }
-  .card--small .card__image {
-    border-radius: 1px 0 0 1px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-  }
-  .card--small .card__image:after {
-    opacity: 0;
-  }
-  .card--small .card__title {
-    color: $color-secondary;
-    z-index: 1;
-    text-align: left; 
-    top: 105px;
-  }
-  .card--small .card__subtitle {
-    display: none;
-  }
-  .card--small .card__text {
-    top: 30px;
-    opacity: 0;
-  }
-  .card--small .card__action-bar {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
+//   .card--small {
+//     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+//     height: 136px;
+//     min-height: 136px;
+//     transition: 0.5s;
+//   }
+//   .card--small .card__image {
+//     border-radius: 1px 0 0 1px;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     opacity: 1;
+//   }
+//   .card--small .card__image:after {
+//     opacity: 0;
+//   }
+//   .card--small .card__title {
+//     color: $color-secondary;
+//     z-index: 1;
+//     text-align: left; 
+//     top: 105px;
+//   }
+//   .card--small .card__subtitle {
+//     display: none;
+//   }
+//   .card--small .card__text {
+//     top: 30px;
+//     opacity: 0;
+//   }
+//   .card--small .card__action-bar {
+//     background-color: rgba(0, 0, 0, 0.3);
+//   }
   
-  .card--small .card__button{
-    display: none;
-  } /* LATEST BLOG END */
+//   .card--small .card__button{
+//     display: none;
+ // } /* LATEST BLOG END */
 
 /* ========================================================================== */
 /* FOOTER START */
@@ -937,6 +943,11 @@ footer {
     margin-top: 8rem;
     background-color: $color-primary;
     color: $color-secondary;
+
+    .container{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 // TODO  
 .contact{
@@ -1077,16 +1088,12 @@ footer h3{
 /* ========================================================================== */
 /* MEDIA QUERIES */
 /* ========================================================================== */
-/* Media queries - Responsive timeline on screens less than 600px wide */
+/* Media queries - Responsive timeline on screens less than 768px wide */
 @media screen and (max-width: 768px) {
-    h1, h2, h3, h4, a, nav, p {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
     .container > div{
         width: 100%;
+        padding: 0;
     }
-
     h4{
         margin-bottom: 2rem;
     }
@@ -1100,6 +1107,7 @@ footer h3{
     /*NAVBAR ___ BURGER */
     .sticky-background{
         background-color: transparent;
+        //max-width: 100%;
     }
     
     .burger{
@@ -1161,6 +1169,16 @@ footer h3{
         }
       }
 
+    .hero {
+        margin-top: 70px;
+        h1{
+            font-size: 2.25rem;
+        }
+        h2{
+            font-size: 4.5rem;
+        }
+  
+    }
       /* ABOUT ME*/
       .about {
           .self-img{
@@ -1172,6 +1190,10 @@ footer h3{
       }
 
       /* SKILLS */
+      .progress-container{
+        margin-left: 10px;
+        margin-right: 10px;
+      }
       .progress-bar > p {
           margin: 0;
       }
@@ -1185,6 +1207,16 @@ footer h3{
       .slide-qoute{
           width: 85%;
       }
+
+    /*RESUME*/
+    .resume{
+        a{
+            margin-top:1.2rem;
+        }
+        p {
+            margin-bottom: 0;
+        } 
+    }
 
     /* TIMELINE */  
     /* Place the timelime to the left */
@@ -1217,6 +1249,35 @@ footer h3{
         left: 0%;
     }
 
+    /*LATEST WORK*/
+    .img-container{
+        .inner__block {
+            white-space: nowrap; 
+            color: white;
+            font-size: 3rem;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -webkit-margin-before: 0px;
+            -webkit-margin-after: 0px;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        } 
+    }
+    .view-more{
+        a{      
+            background-color: $color-success;
+            color: $color-secondary;
+            i{
+                color: $color-secondary;
+                margin-left: 35px;
+            }       
+        }     
+    } /*END OF LATEST WORK*/
+
 
     /* LATEST BLOG*/
 
@@ -1228,6 +1289,11 @@ footer h3{
             h3, p{
                 text-align: center;
             }
+        }
+        .controller:hover,
+        .controller.is_current {
+          -webkit-transform: translate3d(0, 0, 0);
+                  transform: translate3d(0, 0, 0);
         }
     }
 
@@ -1257,14 +1323,110 @@ footer h3{
 //   ##Device = Most of the Smartphones Mobiles (Portrait)
 //   ##Screen = B/w 320px to 479px
 // */
-// @media (min-width: 320px) and (max-width: 480px) {
- 
-//   }
-// /*
-//   ##Device = Tablets, Ipads (portrait)
-//   ##Screen = B/w 768px to 1024px
-// */
+@media  screen and (max-width: 479px) {
+    #particles-js canvas{
+        display: none;
+    }
 
-// @media (min-width: 480px) and (max-width: 1024px) {
+    .container, .timeline, .separation{
+        min-width: 360px;
+    }
+    h1, h2, h3, h4, a, p, nav {
+        text-align: center;
+    }
+    .hero {
+        h1{
+            font-size: 2.25rem;
+        }
+        h2{
+            font-size: 3.5rem;
+        }   
+    }
+    .separation.separation-quotes{
+        p{
+            font-size: 1rem;
+        }
+    }
+    .contact__details {
+        div{
+            width: 100%;
+        }
+    }
 
-// }
+  }
+
+  @media screen and (min-width: 768px) {
+
+/* ========================================================================== */
+/* RESUME */
+/* ========================================================================== */
+    .resume{
+        a:hover {     
+        background-color: $color-success;
+        color: $color-primary;
+        transition: 1s;
+            
+        } /* RESUME SECTION END */
+    }
+    .img-container{
+        .overlay{
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+            width: 100%;
+            height:0;
+            transition: .4s ease;
+        }
+        &:hover{
+            -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.75);
+            transition: .4s ease;
+        }
+        // ONHOVER adds SHADOW
+        &:hover .overlay {
+            bottom: 0;
+            height: 100%;
+        }
+        // ONHOVER makes card bigger
+        &:hover .overlay,
+        &:hover img{
+            transform: scale(1.05);
+            transition: .4s ease;
+        }
+    
+        .inner__block {
+            white-space: nowrap; 
+            color: white;
+            font-size: 3rem;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transition: 5s;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -webkit-margin-before: 0px;
+            -webkit-margin-after: 0px;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        } 
+    }
+
+    .view-more{
+        a{
+            &:hover{
+                background-color: $color-success;
+                color: $color-secondary;
+                i{
+                    color: $color-secondary;
+                    transition: 0.5s;
+                    margin-left: 35px;
+                }
+            }
+        }     
+    } /*END OF LATEST WORK*/
+  }
