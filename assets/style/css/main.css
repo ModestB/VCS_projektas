@@ -1581,6 +1581,8 @@ footer h3 {
   /*RESUME*/
   .resume a {
     margin-top: 1.2rem;
+    background-color: #2ecc71;
+    color: #000;
   }
   .resume p {
     margin-bottom: 0;
