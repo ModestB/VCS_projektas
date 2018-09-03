@@ -1,0 +1,360 @@
+/* ========================================================================== */
+/* MEDIA QUERIES */
+/* ========================================================================== */
+/* Responsive timeline on screens less than 768px wide */
+@media screen and (max-width: 768px) {
+    .container > div{
+        width: 100%;
+        padding: 0;
+    }
+    h4{
+        margin-bottom: 2rem;
+    }
+    i{
+        margin-bottom: 1.2rem;
+    }  
+    p{
+        margin-bottom: 1.5rem;
+    }  
+
+    /*NAVBAR ___ BURGER */
+    .sticky-background{
+        background-color: transparent;
+    }
+    
+    .hamburger-box{
+        display: block;
+    }
+
+    nav{
+        display: none;
+    }
+
+      
+    .responsive{
+        margin-top: 75px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 0;
+        -webkit-transition: all 1s ease;  
+        -moz-transition: all 1s ease;  
+        -o-transition: all 1s ease;  
+        -ms-transition: all 1s ease;  
+        transition: all 1s ease;
+        ul {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            background-color: $color-success;
+            box-shadow: 0 1px 0 lighten($color-success, 10%) inset, 0 -1px 0 darken($color-success, 10%) inset;
+            display: flex;
+            align-items: center;
+
+            i{
+                display: inline;
+                margin-bottom: 0;
+                margin-left: 10px;
+            }
+        };
+
+        li:first-of-type{
+            border-top-left-radius: 5px;
+            border-top: none;
+        }
+        li:last-of-type{
+            border-bottom-left-radius: 5px;
+        }
+        a{
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: $color-primary;
+            padding: 10px 20px;
+            text-align: left;
+            border-bottom: none;
+        }
+        a:hover {
+            border-bottom: none;
+            color: $color-primary;
+        }
+    }
+
+    .responsive__active{
+        width: 200px;
+    }
+
+    .hero {
+        margin-top: 70px;
+        h1{
+            font-size: 2.25rem;
+        }
+        h2{
+            font-size: 4.5rem;
+        }
+    }
+      /* ABOUT ME*/
+    .about {
+        .self-img{
+            display:none;
+        }
+        a{
+          margin: 5px;
+        }
+    }
+
+    /* SKILLS */
+    .progress-container{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .progress-bar > p {
+        margin: 0;
+    }
+
+    /* QOUTES */
+    .slide-img{
+        display: none;
+    }
+
+    .slide-qoute{
+        width: 85%;
+    }
+
+    /*RESUME*/
+    .resume{
+        a{
+            margin-top:1.2rem;
+            background-color: $color-success;
+            color: $color-primary;
+        }
+        p {
+            margin-bottom: 0;
+        } 
+    }
+
+    /* TIMELINE */  
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+    
+    /* Full-width containers */
+    .container-timeline {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .container-timeline::before {
+        left: 60px;
+        border: medium solid $color-primary;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent $color-primary transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+        left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+
+    /*LATEST WORK*/
+    .img-container{
+        .inner__block {
+            white-space: nowrap; 
+            color: white;
+            font-size: 3rem;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -webkit-margin-before: 0px;
+            -webkit-margin-after: 0px;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        } 
+    }
+    .view-more{
+        a{      
+            background-color: $color-success;
+            color: $color-secondary;
+            i{
+                color: $color-secondary;
+                margin-left: 35px;
+            }       
+        }     
+    } /*END OF LATEST WORK*/
+
+
+    /* LATEST BLOG*/
+    .latest-blog{
+        .card-main{
+            width:100%;
+            max-width: 100%;
+
+            h3, p{
+                text-align: center;
+            }
+        }
+        .card__container:hover {
+          -webkit-transform: translate3d(0, 0, 0);
+                  transform: translate3d(0, 0, 0);
+        }
+        .card__body{
+            p{
+                margin-bottom: 0;
+            }
+        }
+        .card__body:hover{
+            -webkit-transform: translate3d(0, 0px, 0);
+            transform: translate3d(0, 0px, 0);
+            
+        }
+    }
+
+    /* CONTACT*/
+
+    .contact{
+        .send-mail{
+            margin: 0 10px;
+            width: 100%;
+            button{
+                align-items: center;
+            }
+            i{
+                margin:0;
+            }
+        }
+        .contact__details{
+            margin-top: 4rem;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
+
+
+// /* 
+//   ##Device = Most of the Smartphones Mobiles (Portrait)
+//   ##Screen = B/w 320px to 479px
+// */
+@media  screen and (max-width: 479px) {
+    // #particles-js canvas{
+    //     display: none;
+    // }
+
+    .container, .timeline, .separation{
+        min-width: 360px;
+    }
+    h1, h2, h3, h4, a, p, nav {
+        text-align: center;
+    }
+    .hero {
+        h1{
+            font-size: 2.25rem;
+        }
+        h2{
+            font-size: 3.5rem;
+        }   
+    }
+    .separation.separation-quotes{
+        p{
+            font-size: 1rem;
+        }
+    }
+    .contact__details {
+        div{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+/* ========================================================================== */
+/* RESUME */
+/* ========================================================================== */
+    .resume{
+        a:hover {     
+        background-color: $color-success;
+        color: $color-primary;
+        transition: 1s;
+            
+        } /* RESUME SECTION END */
+    }
+
+    .img-container{
+        .overlay{
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+            width: 100%;
+            height:0;
+            transition: .4s ease;
+        }
+        &:hover{
+            -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.75);
+            transition: .4s ease;
+        }
+        // ONHOVER adds SHADOW
+        &:hover .overlay {
+            bottom: 0;
+            height: 100%;
+        }
+        // ONHOVER makes card bigger
+        &:hover .overlay,
+        &:hover img{
+            transform: scale(1.05);
+            transition: .4s ease;
+        }
+    
+        .inner__block {
+            white-space: nowrap; 
+            color: white;
+            font-size: 3rem;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transition: 5s;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -webkit-margin-before: 0px;
+            -webkit-margin-after: 0px;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        } 
+    }
+
+    .view-more{
+        a{
+            &:hover{
+                background-color: $color-success;
+                color: $color-secondary;
+                i{
+                    color: $color-secondary;
+                    transition: 0.5s;
+                    margin-left: 35px;
+                }
+            }
+        }     
+    } /*END OF LATEST WORK*/
+}

@@ -1,31 +1,4 @@
 /* ========================================================================== */
-/* SCSS VERIABLES */
-/* ========================================================================== */
-$color-primary: #000;
-$color-secondary: #fff;
-$color-grey: #f2f2f1;
-$color-success: #2ecc71;
-
-
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeOut{
-    from {
-        opacity: 1;
-      }
-      to {
-        opacity: 0;
-      }
-  }
-
-/* ========================================================================== */
 /* GLOBAL */
 /* ========================================================================== */
 *{
@@ -49,7 +22,6 @@ p{
     text-align: center;
 }
 
-
 .container-fluid{
     width: 100%;
 }
@@ -59,20 +31,20 @@ p{
     text-align: center;
 }
 
-.container-small{
-    max-width: 800px;
+// .container-small{
+//     max-width: 800px;
 
-}
+// }
 
 .col-1-2{
     width: 50%;
     padding-right: 40px;
 }
 
-.col-1-3{
-    width: 33.3%;
+// .col-1-3{
+//     width: 33.3%;
   
-}
+// }
 .col-1-4{
     width: 25%;
     h4{
@@ -80,21 +52,21 @@ p{
     }  
 }
 
-.col-3-4{
-    width: 75%;
-}
-.col-2-5{
-    width: 40%;
-}
+// .col-3-4{
+//     width: 75%;
+// }
+// .col-2-5{
+//     width: 40%;
+// }
 .col-3-5{
     width: 60%
 }
-.col-7-10{
-    width: 70%;
-}
-.col-3-10{
-    width: 30%;
-}
+// .col-7-10{
+//     width: 70%;
+// }
+// .col-3-10{
+//     width: 30%;
+// }
 
 h3, p{
     text-align: left;
@@ -110,23 +82,25 @@ p{
     color: #797979; 
 }
 
-.flex-container {
+.flex {
     display: flex;
     justify-content: center; 
 }
 
-.flex-container--column{
+.flex--column{
     flex-direction: column;
     align-items: center;    
 }
 
-.flex-wrap{
+.flex--wrap{
     flex-wrap: wrap;
 }
 
 .flex__end{
     justify-content: flex-end;
 }
+
+
 
 
 /* ========================================================================== */
@@ -156,7 +130,7 @@ header{
     z-index: 100;
 }
 .sticky-background{
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
 }
 
@@ -172,17 +146,23 @@ header{
 nav {
     li{
         float: left;
+
+        i{
+            display: none;
+        }
     }
     a{
         display: block;
+        box-sizing: border-box;
         padding: 1.875rem 1.5625rem 0.9225rem;
         color: $color-secondary;
         text-transform: uppercase;
-        border-bottom: 1px solid transparent;
+        border-bottom: 2px solid transparent;
         
         &:hover{
-            border-bottom: 1px solid white;
-            transition: 1s ease-in;
+            border-bottom: 2px solid $color-success;
+            color: $color-success;
+            transition: 0.25s ease-in;
         }
     }
 }
@@ -296,7 +276,7 @@ nav {
 /* ========================================================================== */
 
 .hobbies {
-    .flex-container{
+    .flex{
         justify-content: space-between;
     }
 }
@@ -325,7 +305,7 @@ nav {
         background-color: #f2f2f2;
         box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
     }
-    .progress-bar.flex-container{
+    .progress-bar.flex{
         align-items: center;
         justify-content: flex-end;
     }
@@ -468,7 +448,7 @@ nav {
     border-radius: 6px;
 } 
 
-.year.flex-container{
+.year.flex{
     margin: 0 auto;
     background-color: $color-success;
     max-width: 200px;
@@ -568,28 +548,34 @@ blockquote {
             text-transform: uppercase;    
         }  
     }
-}
-
-//Latest work CARDS
-.latest-work--cards{
-    margin-bottom: 3.4rem;
-    &.flex-container{
-        flex-wrap: wrap;
-    }
-}
-
-// Latest work CARDS img inner code
-.img-container{
-    margin: 8px;
-    position: relative;
-
     img{
-        display: block;
-        width: 100%;
-        height: auto;
+        -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.3);
     }
-}// END of Latest work CARDS img inner code
 
+
+    //Latest work CARDS
+    .latest-work--cards{
+        margin-bottom: 3.4rem;
+        &.flex{
+            flex-wrap: wrap;
+        }
+    }
+
+    // Latest work CARDS img inner code
+    .img-container{
+        margin: 8px;
+        position: relative;
+
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    // END of Latest work CARDS img inner code
+}
 // VIEW MORE
 .view-more{
     a{
@@ -612,15 +598,14 @@ blockquote {
 .latest-blog {
     margin-top: 6.8rem;
 
-    .flex-container{
+    .flex{
         justify-content: space-around;
     }
 }
 .card__container{
     max-height: 400px; 
     width: 344px;
-    margin-top: 2rem;
-    margin-right: 2rem;
+    margin: 1rem;
 
     .card__body{
         height: 100%;
@@ -644,8 +629,8 @@ blockquote {
             text-align: center;
         }
     }
-    .cadr__subtitle{
-        width:100%;
+    .card__subtitle{
+        width: 100%;
         font-size: 14px;
         margin-bottom:0;
     }
@@ -678,7 +663,7 @@ blockquote {
     transform: translate3d(0, -5px, 0);
 
 }
-  .flex-container.card__subtitle{
+.card__subtitle.flex{
     justify-content: space-between;
 }
   /* LATEST BLOG END */
@@ -729,28 +714,11 @@ footer {
     }
 }
 
-// Form outline reset
-textarea:hover, 
-input:hover, 
-textarea:active, 
-input:active, 
-textarea:focus, 
-input:focus,
-button:focus,
-button:active,
-button:hover,
-label:focus,
-.btn:active,
-.btn.active {
-    outline: 0px;
-    -webkit-appearance:none;
-}
-
 footer h3{
     margin-top: 6.8rem;
 }
 .send-mail{
-    form .flex-container{
+    form .flex{
         align-items: flex-start;
     }
 
@@ -834,354 +802,3 @@ footer h3{
     margin: 3.4rem 0;
 }
 
-/* ========================================================================== */
-/* MEDIA QUERIES */
-/* ========================================================================== */
-/* Responsive timeline on screens less than 768px wide */
-@media screen and (max-width: 768px) {
-    .container > div{
-        width: 100%;
-        padding: 0;
-    }
-    h4{
-        margin-bottom: 2rem;
-    }
-    i{
-        margin-bottom: 1.2rem;
-    }  
-    p{
-        margin-bottom: 1.5rem;
-    }  
-
-    /*NAVBAR ___ BURGER */
-    .sticky-background{
-        background-color: transparent;
-    }
-    
-    .hamburger-box{
-        display: block;
-    }
-
-    nav{
-        display: none;
-    }
-      
-    .responsive{
-        margin-top: 75px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 0;
-        //opacity: 0;
-        -webkit-transition: all 1s ease;  
-        -moz-transition: all 1s ease;  
-        -o-transition: all 1s ease;  
-        -ms-transition: all 1s ease;  
-        transition: all 1s ease;
-        ul {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            padding: 0;
-            margin: 0;
-        }
-        li{
-            background-color: $color-success;
-            box-shadow: 0 1px 0 lighten($color-success, 10%) inset, 0 -1px 0 darken($color-success, 10%) inset;
-        };
-
-        li:first-of-type{
-            border-top-left-radius: 5px;
-            border-top: none;
-        }
-        li:last-of-type{
-            border-bottom-left-radius: 5px;
-        }
-        a{
-            font-weight: 400;
-            font-size: 1.2rem;
-            color: $color-primary;
-            padding: 10px 20px;
-            text-align: left;
-            border-bottom: none;
-        }
-        a:hover {
-            border-bottom: none;
-        }
-    }
-
-    .responsive__active{
-        width: 200px;
-    }
-
-    .hero {
-        margin-top: 70px;
-        h1{
-            font-size: 2.25rem;
-        }
-        h2{
-            font-size: 4.5rem;
-        }
-    }
-      /* ABOUT ME*/
-    .about {
-        .self-img{
-            display:none;
-        }
-        a{
-          margin: 5px;
-        }
-    }
-
-    /* SKILLS */
-    .progress-container{
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .progress-bar > p {
-        margin: 0;
-    }
-
-    /* QOUTES */
-    .slide-img{
-        display: none;
-    }
-
-    .slide-qoute{
-        width: 85%;
-    }
-
-    /*RESUME*/
-    .resume{
-        a{
-            margin-top:1.2rem;
-            background-color: $color-success;
-            color: $color-primary;
-        }
-        p {
-            margin-bottom: 0;
-        } 
-    }
-
-    /* TIMELINE */  
-    /* Place the timelime to the left */
-    .timeline::after {
-        left: 31px;
-    }
-    
-    /* Full-width containers */
-    .container-timeline {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-    
-    /* Make sure that all arrows are pointing leftwards */
-    .container-timeline::before {
-        left: 60px;
-        border: medium solid $color-primary;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent $color-primary transparent transparent;
-    }
-
-    /* Make sure all circles are at the same spot */
-    .left::after, .right::after {
-        left: 15px;
-    }
-    
-    /* Make all right containers behave like the left ones */
-    .right {
-        left: 0%;
-    }
-
-    /*LATEST WORK*/
-    .img-container{
-        .inner__block {
-            white-space: nowrap; 
-            color: white;
-            font-size: 3rem;
-            position: absolute;
-            overflow: hidden;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -webkit-margin-before: 0px;
-            -webkit-margin-after: 0px;
-            -webkit-margin-start: 0px;
-            -webkit-margin-end: 0px;
-        } 
-    }
-    .view-more{
-        a{      
-            background-color: $color-success;
-            color: $color-secondary;
-            i{
-                color: $color-secondary;
-                margin-left: 35px;
-            }       
-        }     
-    } /*END OF LATEST WORK*/
-
-
-    /* LATEST BLOG*/
-    .latest-blog{
-        .card-main{
-            width:100%;
-            max-width: 100%;
-
-            h3, p{
-                text-align: center;
-            }
-        }
-        .card__container:hover {
-          -webkit-transform: translate3d(0, 0, 0);
-                  transform: translate3d(0, 0, 0);
-        }
-        .card__body{
-            p{
-                margin-bottom: 0;
-            }
-        }
-        .card__body:hover{
-            -webkit-transform: translate3d(0, 0px, 0);
-            transform: translate3d(0, 0px, 0);
-            
-        }
-    }
-
-    /* CONTACT*/
-
-    .contact{
-        .send-mail{
-            margin: 0 10px;
-            width: 100%;
-            button{
-                align-items: center;
-            }
-            i{
-                margin:0;
-            }
-        }
-        .contact__details{
-            margin-top: 4rem;
-            width: 100%;
-            justify-content: center;
-        }
-    }
-}
-
-
-// /* 
-//   ##Device = Most of the Smartphones Mobiles (Portrait)
-//   ##Screen = B/w 320px to 479px
-// */
-@media  screen and (max-width: 479px) {
-    #particles-js canvas{
-        display: none;
-    }
-
-    .container, .timeline, .separation{
-        min-width: 360px;
-    }
-    h1, h2, h3, h4, a, p, nav {
-        text-align: center;
-    }
-    .hero {
-        h1{
-            font-size: 2.25rem;
-        }
-        h2{
-            font-size: 3.5rem;
-        }   
-    }
-    .separation.separation-quotes{
-        p{
-            font-size: 1rem;
-        }
-    }
-    .contact__details {
-        div{
-            width: 100%;
-        }
-    }
-}
-
-@media screen and (min-width: 768px) {
-
-/* ========================================================================== */
-/* RESUME */
-/* ========================================================================== */
-    .resume{
-        a:hover {     
-        background-color: $color-success;
-        color: $color-primary;
-        transition: 1s;
-            
-        } /* RESUME SECTION END */
-    }
-
-    .img-container{
-        .overlay{
-            position: absolute;
-            bottom: 100%;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.6);
-            overflow: hidden;
-            width: 100%;
-            height:0;
-            transition: .4s ease;
-        }
-        &:hover{
-            -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
-            -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
-            box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.75);
-            transition: .4s ease;
-        }
-        // ONHOVER adds SHADOW
-        &:hover .overlay {
-            bottom: 0;
-            height: 100%;
-        }
-        // ONHOVER makes card bigger
-        &:hover .overlay,
-        &:hover img{
-            transform: scale(1.05);
-            transition: .4s ease;
-        }
-    
-        .inner__block {
-            white-space: nowrap; 
-            color: white;
-            font-size: 3rem;
-            position: absolute;
-            overflow: hidden;
-            top: 50%;
-            left: 50%;
-            transition: 5s;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -webkit-margin-before: 0px;
-            -webkit-margin-after: 0px;
-            -webkit-margin-start: 0px;
-            -webkit-margin-end: 0px;
-        } 
-    }
-
-    .view-more{
-        a{
-            &:hover{
-                background-color: $color-success;
-                color: $color-secondary;
-                i{
-                    color: $color-secondary;
-                    transition: 0.5s;
-                    margin-left: 35px;
-                }
-            }
-        }     
-    } /*END OF LATEST WORK*/
-}

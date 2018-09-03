@@ -1,0 +1,28 @@
+h1, h2, h3, h4, a, nav, p {
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+// Form outline reset
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+    outline: 0px;
+    -webkit-appearance:none;
+}

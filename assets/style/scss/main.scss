@@ -1,5 +1,7 @@
-@import '_normalize';
-@import '_reset';
-@import '_fonts';
-@import '_style';
-@import 'hamburger/_hamburger.scss';
+@import 'partials/_normalize';
+@import 'partials/_reset';
+@import 'vendors/_ico-moon';
+@import 'modules/_variables';
+@import 'partials/_style';
+@import 'partials/_media';
+@import 'vendors/hamburger/_hamburger.scss';

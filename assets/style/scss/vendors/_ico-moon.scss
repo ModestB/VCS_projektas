@@ -30,16 +30,7 @@
     color: #fff;
   }
 
-  .icon-clipboard,
-  .icon-pencil2,
-  .icon-wrench,
-  .icon-rocket,
-  .icon-html-five,
-  .icon-css3,
-  .icon-javascript,
-  .icon-shield,
-  .icon-target,
-  .icon-book{
+  .icon_big{
     display: block;  
     font-size: 3.8rem;
     margin-bottom: 35px;
@@ -50,13 +41,6 @@
     font-size: 1.8rem;
   }
 
-  .icon-html-five,
-  .icon-css3,
-  .icon-javascript,
-  .icon-phone,
-  .icon-mail3{
-    color:white;
-  }
   .icon-menu{
     color:#2ecc71;
   }
@@ -125,4 +109,13 @@
   }
   .icon-menu:before {
     content: "\e9bd";
+  }
+  .icon-user:before {
+    content: "\e971";
+  }
+  .icon-briefcase:before {
+    content: "\e9ae";
+  }
+  .icon-profile:before {
+    content: "\e923";
   }
