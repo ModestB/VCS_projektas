@@ -1,14 +1,21 @@
+'use strict';
 //On scroll adds class sticky background to element with ID #header
-const navbar = document.querySelector('#header');
-const sticky = navbar.offsetHeight;
+//const navbar = document.querySelector('#header');
+//const sticky = navbar.offsetHeight;
 
 const addSticky = () => {
-    if (window.pageYOffset >= sticky) { 
-        navbar.classList.add("sticky-background")
-    } else {
-        navbar.classList.remove("sticky-background");
-    } 
-}
+    const navbar = document.querySelector('#header');
+    const sticky = navbar.offsetHeight;
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset >= sticky) { 
+            navbar.classList.add("sticky-background")
+        } else {
+            navbar.classList.remove("sticky-background");       
+        }; 
+    });
+};
+
 
 // ADDS @fadeIn style to single slide determined by slideIndex
 // MAKES that slide visible display: block
@@ -31,9 +38,9 @@ const addSlideStyle = function(slideIndex, slides, waitTime){
             setTimeout(() => {
                 resolve(slidesArray.forEach((slide) => slide.style.display = "none"));
             }, 5000);            
-        },waitTime)   
+        }, waitTime);   
    });
-}
+};
 
 // AT RUN calls addSlideStyle function for initialization
 // CHECKS current slideIndex
@@ -52,14 +59,10 @@ const addSlideStyle = function(slideIndex, slides, waitTime){
             slideIndex = 0;
         } else {
             slideIndex --;
-        }
+        };
         resolve(addSlide(slideIndex, slides));
     });
-  }
-
-
-
-window.onscroll = addSticky;
+  };
 //addSlide();
 
 
@@ -77,12 +80,10 @@ function progressBarLoader(){
 
         isNaN(progressAmount) ? progressAmount = 0 : progressAmount; 
         element.style.width = `${progressAmount}%`;
-        progressText.innerHTML = progressAmount + '%';   
+        progressText.innerHTML = `${progressAmount}%`;   
     });
-    
 };
 
-progressBarLoader()
 
 // =============================================================================
 // RETURN current page y position
@@ -91,26 +92,27 @@ function currentYPosition() {
     // Firefox, Chrome, Opera, Safari
     if (self.pageYOffset) return self.pageYOffset;
     // Internet Explorer 6 - standards mode
-    if (document.documentElement && document.documentElement.scrollTop)
+    if (document.documentElement && document.documentElement.scrollTop){
         return document.documentElement.scrollTop;
+    };
     // Internet Explorer 6, 7 and 8
     if (document.body.scrollTop) return document.body.scrollTop;
     return 0;
-}
+};
 
 // =============================================================================
 // RETURN elements with eID y position
 // =============================================================================
 function elmYPosition(eID) {
-    var elm = document.querySelector(eID);
-    var y = elm.offsetTop;
-    var node = elm;
+    const elm = document.querySelector(eID);
+    let y = elm.offsetTop;
+    let node = elm;
     while (node.offsetParent && node.offsetParent != document.body) {
         node = node.offsetParent;
         y += node.offsetTop;   
-    } 
+    }; 
     return y; 
-}
+};
 
 // =============================================================================
 // ADD smooth scrolling to element with eID
@@ -124,41 +126,40 @@ function elmYPosition(eID) {
 // DETERMENT leapY next coordinate to jump to
 // =============================================================================
 function smoothScroll(eID) {
-    var startY = currentYPosition();
-    var stopY = elmYPosition(eID);
-    //var navHeigh = document.querySelector("nav").clientHeight;
+    const startY = currentYPosition();
+    let stopY = elmYPosition(eID);
     if(eID !== '#contact') {
         stopY = stopY - 120;
-    }
-    var distance = stopY > startY ? stopY - startY : startY - stopY;
+    };
+    const distance = stopY > startY ? stopY - startY : startY - stopY;
     if (distance < 100) {
         scrollTo(0, stopY);
         return;
-    } 
-    var speed = Math.round(distance / 100);
+    }; 
+    let speed = Math.round(distance / 100);
     if (speed >= 20) speed = 20;
-    var step = Math.round(distance / 25);
-    var leapY = stopY > startY ? startY + step : startY - step;
-    var timer = 0;
+    const step = Math.round(distance / 25);
+    let leapY = stopY > startY ? startY + step : startY - step;
+    let timer = 0;
 
     // PERFORMS downward scroll
     if (stopY > startY) {
-        for (var i = startY; i < stopY; i += step) {
-            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+        for (let i = startY; i < stopY; i += step) {
+            setTimeout(`window.scrollTo(0, ${leapY})`, timer * speed);
             leapY += step;
             if (leapY > stopY) leapY = stopY;
             timer++;
-        } 
+        }; 
         return;
-    }
+    };
     // PERFORMS upward scroll
-    for (var i = startY; i > stopY; i -= step) {
-        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+    for (let i = startY; i > stopY; i -= step) {
+        setTimeout(`window.scrollTo(0, ${leapY})`, timer * speed);
         leapY -= step; 
         if (leapY < stopY) leapY = stopY;
         timer++;
-    }
-}
+    };
+};
 
 // =============================================================================
 // ADD all anchor elements in nav tag to elements ARRAY
@@ -167,44 +168,89 @@ function smoothScroll(eID) {
 // ADD smoothScroll
 // =============================================================================
 function addSmoothScroll(){
-    elements = document.querySelectorAll("nav a");
+    const elements = document.querySelectorAll("nav a");
     elements.forEach((element) => {
         element.addEventListener("click", (event) =>{
             event.preventDefault();
-            eID = element.getAttribute('href');
+            let eID = element.getAttribute('href');
             smoothScroll(eID); 
         });
     });
 };
 
-addSmoothScroll();
-
-
 //BURGER
-
 function responsiveMenu(){
-    nav = document.querySelector("nav");
-    burgerIcon = document.querySelector(".burger")
+    const nav = document.querySelector("nav");
+    const burgerIcon = document.querySelector(".hamburger")
+    nav.classList.add('responsive');
+    
 
     burgerIcon.addEventListener('click', (event) => {
         event.preventDefault();
-        nav.classList.toggle('responsive');
-    })
+        nav.classList.toggle('responsive__active');
+        burgerIcon.classList.toggle('is-active');
+    });
     window.addEventListener('scroll', () => {
-        nav.classList.remove('responsive');
-    })
+        nav.classList.remove('responsive__active');
+        burgerIcon.classList.remove('is-active');
+    });
+    window.addEventListener('resize', () => {
+        nav.classList.remove('responsive__active');
+        burgerIcon.classList.remove('is-active');
+    });
 };
 
-responsiveMenu();
 
-
+// FIND .card__text p innerHTML text
+// CHECK if it's longer than 80 characters
+// TRUE cut to 80 characters add ... on the end
+// CHANGE .card__text p innerHTML to updated value
 function cardTextAdjust() {
-    textElArr = document.querySelectorAll(".card__text p");
+    const textElArr = document.querySelectorAll(".card__text p");
     textElArr.forEach((textEl) => {
         let text = textEl.innerHTML;
         if(text.length > 80){
             textEl.innerHTML = `${text.substring(0, 80)}...`    
-        }   
-    })
-}
-cardTextAdjust()
+        };   
+    });
+};
+
+// =============================================================================
+// SWIPER INITIALIZATION
+// =============================================================================
+function initializeSwiper(){
+    const swiper = new Swiper('.swiper-container', {
+        spaceBetween: 40,
+        centeredSlides: true,
+        autoplay: {
+            delay: 15000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+};
+
+
+function particleLoad() {
+     /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', './assets/scripts/particle/particles.json');
+};
+
+// =============================================================================
+// FUNCTION CALLS
+// =============================================================================
+    particleLoad();
+    addSmoothScroll();
+    responsiveMenu();
+    addSticky();
+    progressBarLoader();
+    cardTextAdjust();
+    initializeSwiper();
+

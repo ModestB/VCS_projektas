@@ -25,9 +25,14 @@
                 <div class="container-fluid flex-container sticky" id="header">
                     <div class="container">
                         <div class="flex-container flex__end">
-                            <div class="burger">
+                            <!-- <div class="burger">
                                 <i class="icon-menu"></i>
-                            </div>
+                            </div> -->
+                            <button class="hamburger hamburger--spin" type="button">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
                             <nav>
                                 <ul>
                                     <li><a href="#about-me">About</a></li>
@@ -492,34 +497,8 @@
         </div>
     </footer> 
 
-
-    <script src="./assets/scripts/scripts.js"></script>
+    <script src="./assets/scripts/particle/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
-      <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-        spaceBetween: 40,
-        centeredSlides: true,
-        autoplay: {
-            delay: 10000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        });
-  </script>
-   <script src="./assets/scripts/particle/particles.min.js"></script>
-   <script>
-       /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-         particlesJS.load('particles-js', './assets/scripts/particle/particles.json', function() {
-         console.log('callback - particles.js config loaded');
-         });
-   </script>
+    <script src="./assets/scripts/main.js"></script>
 </body>
 </html>
