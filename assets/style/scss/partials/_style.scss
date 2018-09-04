@@ -16,8 +16,8 @@ body{
 }
 
 h1, h2, h3, h4, p {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
 }
 
 p{
@@ -36,7 +36,7 @@ p{
 
 .col-1-2{
     width: 50%;
-    padding-right: 40px;
+    padding-right: 2.5rem;
 }
 
 .col-1-4{
@@ -133,7 +133,7 @@ nav {
     a{
         display: block;
         box-sizing: border-box;
-        padding: 1.875rem 1.5625rem 0.9225rem;
+        padding: 2rem 1.5rem 1rem;
         color: $color-secondary;
         text-transform: uppercase;
         border-bottom: 2px solid transparent;
@@ -173,7 +173,7 @@ nav {
             padding: 0.1rem 0;
             margin: 0 auto;
             content: "";
-            width: 50px;
+            width: 3.125rem;
             border-bottom: 1px solid white;
         }
     }
@@ -243,7 +243,7 @@ nav {
         color: $color-primary;
         margin-top: 1.2rem;
         text-align: center;
-        padding: 0 10px;
+        padding: 0 0.625rem;
     }
 } /*Separation end*/
 
@@ -265,7 +265,7 @@ nav {
     .progress-container{
         h4{
             text-align: left;
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
             font-size: 1.4rem;
             font-weight: 700;
             color: #566366;
@@ -273,8 +273,8 @@ nav {
         }   
     }
     .progress{
-        padding: 4px;
-        margin-bottom: 30px;
+        padding: 0.25rem;
+        margin-bottom: 2rem;
         background-color: #f2f2f2;
         box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
     }
@@ -292,7 +292,7 @@ nav {
             color: $color-secondary;
             font-size: 1.2rem;
             font-weight: 700;
-            padding-right: 5px;
+            padding-right: 0.3125rem;
         }
     }
 } /* SKILLS END*/
@@ -318,7 +318,7 @@ nav {
         transform: translateX(-50%);
     }
     a{
-        padding: 15px 20px;
+        padding: 1rem 1.25rem;
         color: $color-success;
         border: 1px solid $color-success;
         margin-top: 2.5rem;
@@ -375,7 +375,7 @@ nav {
 
 /* Container around content */
 .container-timeline {
-    padding: 10px 0;
+    padding: 0.625rem 0;
     position: relative;
     background-color: inherit;
     width: 50%;
@@ -413,7 +413,7 @@ nav {
 
 /* The actual content */
 .content {
-    padding: 20px 0;
+    padding: 1.25rem 0;
     background-color: $color-grey;
     position: relative;
     border-radius: 6px;
@@ -427,7 +427,7 @@ nav {
     align-items: center;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     h2{
         margin-bottom: 0;
         color: $color-primary;
@@ -448,25 +448,25 @@ nav {
 
 blockquote {
     border-left: 10px solid $color-primary;
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
+    margin: 1.5rem 0.625rem;
+    padding: 0.5rem 0.625rem;
 
     &:before {
         color: $color-primary;
         content: open-quote;
-        font-size: 4em;
-        line-height: 0.1em;
-        margin-right: 0.25em;
-        vertical-align: -0.4em;
+        font-size: 4rem;
+        line-height: 0.1rem;
+        margin-right: 0.25rem;
+        vertical-align: -1rem;
       }
 
     &:after {
     color: $color-primary;
     content: close-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.8em;
+    font-size: 4rem;
+    line-height: 0.1rem;
+    margin-right: 0.25rem;
+    vertical-align: -3rem;
     }
     
     p {
@@ -507,7 +507,7 @@ blockquote {
             margin-bottom: 5rem;
         }     
         h2{
-            font-size: 1.875rem;
+            font-size: 2rem;
             text-transform: uppercase;    
         }  
     }
@@ -525,7 +525,7 @@ blockquote {
 
     // Latest work CARDS img inner code
     .img-container{
-        margin: 8px;
+        margin: 0.5rem;
         position: relative;
 
         img{
@@ -545,7 +545,7 @@ blockquote {
         color: $color-primary;
         padding: 0.5rem;
         i{
-            margin-left: 25px;
+            margin-left: 1.5rem;
         }
     }     
 } /*END OF LATEST WORK*/
@@ -573,13 +573,13 @@ blockquote {
     .card__text{
         h2{
             font-size: 1.5rem;
-            padding: 0 16px;
+            padding: 0 1rem;
             font-weight: 400;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
         }
         p{
             font-size: 0.875rem;
-            padding: 16px 0;
+            padding: 1rem 0;
             line-height: 1.6;
             color: $color-primary;
             overflow: hidden;
@@ -602,7 +602,7 @@ blockquote {
             width: 100%;
             display: block;
             line-height: 40px;
-            padding: 0 8px;
+            padding: 0 0.5rem;
             color: $color-primary;
             border-left:  1px solid #E0E0E0;
         }
@@ -633,8 +633,8 @@ footer {
     color: $color-secondary;
 
     .container{
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 0.625rem;
+        margin-right: 0.625rem;
     }
 }
  
@@ -650,7 +650,7 @@ footer {
         color: $color-secondary;
     }
     .contact__text h2{
-        font-size: 1.875rem;
+        font-size: 2rem;
         margin-bottom: 3.125rem;    
     }
     .contact__text p {
@@ -721,7 +721,7 @@ footer h3{
     }
 
     button i{
-        padding-left: 15px;
+        padding-left: 1rem;
         color: $color-secondary;
     }
 
@@ -734,7 +734,7 @@ footer h3{
     button:hover i{
         color: $color-primary;
         transition: 0.5s;
-        padding-left: 25px;
+        padding-left: 1.5rem;
     }
     input:focus,
     textarea:focus{

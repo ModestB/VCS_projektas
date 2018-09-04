@@ -32,7 +32,7 @@
 
       
     .responsive{
-        margin-top: 75px;
+        margin-top: 4.5rem;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
         display: flex;
@@ -60,7 +60,7 @@
             i{
                 display: inline;
                 margin-bottom: 0;
-                margin-left: 10px;
+                margin-left: 0.625rem;
             }
         };
 
@@ -75,7 +75,7 @@
             font-weight: 400;
             font-size: 1.2rem;
             color: $color-primary;
-            padding: 10px 20px;
+            padding: 0.625rem 1.25rem;
             text-align: left;
             border-bottom: none;
         }
@@ -90,7 +90,7 @@
     }
 
     .hero {
-        margin-top: 70px;
+        margin-top: 4.5rem;
         h1{
             font-size: 2.25rem;
         }
@@ -104,14 +104,14 @@
             display:none;
         }
         a{
-          margin: 5px;
+          margin: 0.3125rem;
         }
     }
 
     /* SKILLS */
     .progress-container{
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 0.625rem;
+        margin-right: 0.625rem;
     }
     .progress-bar > p {
         margin: 0;
@@ -129,7 +129,7 @@
     /*RESUME*/
     .resume{
         a{
-            margin-top:1.2rem;
+            margin-top: 1.2rem;
             background-color: $color-success;
             color: $color-primary;
         }
@@ -147,8 +147,8 @@
     /* Full-width containers */
     .container-timeline {
         width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
+        padding-left: 4.5rem;
+        padding-right: 1.5rem;
     }
     
     /* Make sure that all arrows are pointing leftwards */
@@ -193,7 +193,7 @@
             color: $color-secondary;
             i{
                 color: $color-secondary;
-                margin-left: 35px;
+                margin-left: 2rem;
             }       
         }     
     } /*END OF LATEST WORK*/
@@ -229,7 +229,7 @@
 
     .contact{
         .send-mail{
-            margin: 0 10px;
+            margin: 0 0.625rem;
             width: 100%;
             button{
                 align-items: center;
@@ -352,7 +352,7 @@
                 i{
                     color: $color-secondary;
                     transition: 0.5s;
-                    margin-left: 35px;
+                    margin-left: 2rem;
                 }
             }
         }     
