@@ -576,7 +576,7 @@ p {
   color: #797979;
 }
 
-.flex {
+.flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -600,7 +600,7 @@ p {
   flex-wrap: wrap;
 }
 
-.flex__end {
+.flex--end {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
@@ -775,7 +775,7 @@ nav a:hover {
 }
 
 .separation .container {
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 
 .separation p {
@@ -789,7 +789,7 @@ nav a:hover {
 /* ========================================================================== */
 /* SEPARATION HOBBIES */
 /* ========================================================================== */
-.hobbies .flex {
+.hobbies .flex-container {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -819,13 +819,10 @@ nav a:hover {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
-.skills .progress-bar.flex {
+.skills .progress-bar.flex-container {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
 }
 
 .skills .progress-bar {
@@ -976,7 +973,7 @@ nav a:hover {
   border-radius: 6px;
 }
 
-.year.flex {
+.year.flex-container {
   margin: 0 auto;
   background-color: #2ecc71;
   max-width: 200px;
@@ -989,7 +986,7 @@ nav a:hover {
   padding: 10px 20px;
 }
 
-.year.flex h2 {
+.year.flex-container h2 {
   margin-bottom: 0;
   color: #000;
 }
@@ -1044,14 +1041,6 @@ blockquote p {
   font-size: 1.1rem;
   background: #f2f2f1;
   /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
@@ -1090,11 +1079,6 @@ blockquote p {
   margin-bottom: 3.4rem;
 }
 
-.latest-work .latest-work--cards.flex {
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
 .latest-work .img-container {
   margin: 8px;
   position: relative;
@@ -1124,9 +1108,6 @@ blockquote p {
 /* ========================================================================== */
 .latest-blog {
   margin-top: 6.8rem;
-}
-
-.latest-blog .flex {
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
@@ -1150,14 +1131,14 @@ blockquote p {
 }
 
 .card__container .card__text h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   padding: 0 16px;
   font-weight: 400;
   margin-bottom: 16px;
 }
 
 .card__container .card__text p {
-  font-size: 14px;
+  font-size: 0.875rem;
   padding: 16px 0;
   line-height: 1.6;
   color: #000;
@@ -1167,18 +1148,12 @@ blockquote p {
 
 .card__container .card__subtitle {
   width: 100%;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 0;
 }
 
 .card__container .card__actionbar {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   border-top: 1px solid #E0E0E0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1204,7 +1179,7 @@ blockquote p {
   transform: translate3d(0, -5px, 0);
 }
 
-.card__subtitle.flex {
+.card__subtitle.flex-container {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1276,7 +1251,7 @@ footer h3 {
   /* IE 10+ */
 }
 
-.send-mail form .flex {
+.send-mail form .flex-container {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
