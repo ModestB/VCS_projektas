@@ -112,20 +112,45 @@ function smoothScroll(eID) {
     };
 };
 
+// ADD window scroll event listener
+// DETERMINE section top 'coordinate' - 120 (section top Y)
+// DETERMINE section heigth
+// DETERMINE currentY
+// IF currentY is below sectionTop Y AND currentY above sectionBottom Y (sectionTop + sectionHeight)
+// TRUE add class active to navElement
+// ELSE remove
+function activeClass(sectionId, navElement){
+    const sectionEle = document.querySelector(sectionId);
+
+    window.addEventListener('scroll', () => {
+        const sectionTop = sectionEle.offsetTop - 120;
+        const sectionHeight = sectionEle.offsetHeight;
+        const currentY = currentYPosition();
+
+        if(currentY >= sectionTop && currentY < (sectionTop + sectionHeight)){
+            navElement.classList.add('active');
+        } else {
+            navElement.classList.remove('active');
+        };
+    });
+};
+
 // =============================================================================
 // ADD all anchor elements in nav tag to elements ARRAY
 // ADD eventListener "click" forEach element in elements ARRAY
 // ONCLICK determine element ID ---> eID by getting element attribute href
 // ADD smoothScroll
+// ADD activeClass
 // =============================================================================
-function addSmoothScroll(){
+function addActionOnScroll(){
     const elements = document.querySelectorAll("nav a");
     elements.forEach((element) => {
+        let eID = element.getAttribute('href');
         element.addEventListener("click", (event) =>{
             event.preventDefault();
-            let eID = element.getAttribute('href');
             smoothScroll(eID); 
         });
+        activeClass(eID, element);
     });
 };
 
@@ -198,7 +223,7 @@ function particleLoad() {
 // FUNCTION CALLS
 // =============================================================================
     particleLoad();
-    addSmoothScroll();
+    addActionOnScroll();
     responsiveMenu();
     addSticky();
     progressBarLoader();
