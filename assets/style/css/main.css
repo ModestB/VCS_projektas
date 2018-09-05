@@ -1430,6 +1430,7 @@ footer h3 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    height: 0;
     width: 0;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -1485,6 +1486,7 @@ footer h3 {
     color: #000;
   }
   .responsive__active {
+    height: auto;
     width: 200px;
   }
   .hero {

@@ -154,6 +154,7 @@ function addActionOnScroll(){
     });
 };
 
+
 //BURGER
 function responsiveMenu(){
     const nav = document.querySelector("nav");
