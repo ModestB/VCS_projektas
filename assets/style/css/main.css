@@ -1419,24 +1419,25 @@ footer h3 {
   }
   .responsive {
     margin-top: 4.5rem;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 0;
-    width: 0;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
+    max-height: 0;
+    overflow: hidden;
+    width: 200px;
+    transition: max-height 0.8s;
+    -webkit-transition: max-height 0.8s;
+    -moz-transition: max-height 0.8s;
+    -o-transition: max-height 0.8s;
+    -ms-transition: max-height 0.8s;
   }
   .responsive ul {
     display: -webkit-box;
@@ -1485,9 +1486,8 @@ footer h3 {
     border-bottom: none;
     color: #000;
   }
-  .responsive__active {
-    height: auto;
-    width: 200px;
+  .responsive.responsive__active {
+    max-height: 400px;
   }
   .hero {
     margin-top: 4.5rem;

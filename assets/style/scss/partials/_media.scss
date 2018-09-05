@@ -33,19 +33,20 @@
       
     .responsive{
         margin-top: 4.5rem;
+        display: flex;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
-        display: flex;
         justify-content: flex-start;
         align-items: center;
-        height: 0;
-        width: 0;
-        -webkit-transition: all 1s ease;  
-        -moz-transition: all 1s ease;  
-        -o-transition: all 1s ease;  
-        -ms-transition: all 1s ease;  
-        transition: all 1s ease;
-        
+        max-height: 0;
+        overflow:hidden;
+        width: 200px;
+        transition: max-height 0.8s;
+        -webkit-transition: max-height 0.8s;  
+        -moz-transition: max-height 0.8s;  
+        -o-transition: max-height 0.8s;  
+        -ms-transition: max-height 0.8s;  
+  
         ul {
             display: flex;
             flex-direction: column;
@@ -91,9 +92,8 @@
         }
     }
 
-    .responsive__active{
-        height: auto;
-        width: 200px;
+    .responsive.responsive__active{
+        max-height: 400px;
     }
 
     .hero {
