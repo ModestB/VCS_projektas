@@ -1,8 +1,5 @@
 'use strict';
 //On scroll adds class sticky background to element with ID #header
-//const navbar = document.querySelector('#header');
-//const sticky = navbar.offsetHeight;
-
 const addSticky = () => {
     const navbar = document.querySelector('#header');
     const sticky = navbar.offsetHeight;
@@ -135,6 +132,10 @@ function responsiveMenu(){
     const burgerIcon = document.querySelector(".hamburger")
     nav.classList.add('responsive');
     
+    function removeActive() {
+        nav.classList.remove('responsive__active');
+        burgerIcon.classList.remove('is-active');
+    }
 
     burgerIcon.addEventListener('click', (event) => {
         event.preventDefault();
@@ -142,12 +143,10 @@ function responsiveMenu(){
         burgerIcon.classList.toggle('is-active');
     });
     window.addEventListener('scroll', () => {
-        nav.classList.remove('responsive__active');
-        burgerIcon.classList.remove('is-active');
+        removeActive();
     });
     window.addEventListener('resize', () => {
-        nav.classList.remove('responsive__active');
-        burgerIcon.classList.remove('is-active');
+        removeActive();  
     });
 };
 
