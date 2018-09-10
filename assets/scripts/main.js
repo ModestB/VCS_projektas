@@ -220,7 +220,7 @@ function initializeSwiper(){
 
 function particleLoad() {
      /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-    particlesJS.load('particles-js', ' http://localhost/vcs_projektas_wp/wp-content/themes/vcs-starter/assets/scripts/particle/particles.json');
+    particlesJS.load('particles-js', './assets/scripts/particle/particles.json');
 };
 //wp-content/themes/vcs-starter/assets/scripts/particle/particles.json
 // =============================================================================
