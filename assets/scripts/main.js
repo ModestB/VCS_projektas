@@ -1,5 +1,8 @@
 'use strict';
 //On scroll adds class sticky background to element with ID #header
+//const navbar = document.querySelector('#header');
+//const sticky = navbar.offsetHeight;
+
 const addSticky = () => {
     const navbar = document.querySelector('#header');
     const sticky = navbar.offsetHeight;
@@ -52,7 +55,7 @@ function currentYPosition() {
 // RETURN elements with eID y position
 // =============================================================================
 function elmYPosition(eID) {
-    const elm = document.querySelector(eID);
+    const elm = document.querySelector(eID);  
     let y = elm.offsetTop;
     let node = elm;
     while (node.offsetParent && node.offsetParent != document.body) {
@@ -118,7 +121,6 @@ function smoothScroll(eID) {
 // ELSE remove
 function activeClass(sectionId, navElement){
     const sectionEle = document.querySelector(sectionId);
-
     window.addEventListener('scroll', () => {
         const sectionTop = sectionEle.offsetTop - 120;
         const sectionHeight = sectionEle.offsetHeight;
@@ -143,11 +145,13 @@ function addActionOnScroll(){
     const elements = document.querySelectorAll("nav a");
     elements.forEach((element) => {
         let eID = element.getAttribute('href');
-        element.addEventListener("click", (event) =>{
-            event.preventDefault();
-            smoothScroll(eID); 
-        });
-        activeClass(eID, element);
+        if(eID[0] == '#') {
+            element.addEventListener("click", (event) =>{
+                event.preventDefault();
+                smoothScroll(eID); 
+                activeClass(eID, element);
+            });
+        }
     });
 };
 
@@ -155,25 +159,26 @@ function addActionOnScroll(){
 //BURGER
 function responsiveMenu(){
     const nav = document.querySelector("nav");
-    const burgerIcon = document.querySelector(".hamburger")
-    nav.classList.add('responsive');
-    
-    function removeActive() {
-        nav.classList.remove('responsive__active');
-        burgerIcon.classList.remove('is-active');
-    }
+    try {
+        const burgerIcon = document.querySelector(".hamburger")
+        nav.classList.add('responsive');
 
-    burgerIcon.addEventListener('click', (event) => {
-        event.preventDefault();
-        nav.classList.toggle('responsive__active');
-        burgerIcon.classList.toggle('is-active');
-    });
-    window.addEventListener('scroll', () => {
-        removeActive();
-    });
-    window.addEventListener('resize', () => {
-        removeActive();  
-    });
+        burgerIcon.addEventListener('click', (event) => {
+            event.preventDefault();
+            nav.classList.toggle('responsive__active');
+            burgerIcon.classList.toggle('is-active');
+        });
+            window.addEventListener('scroll', () => {
+            nav.classList.remove('responsive__active');
+            burgerIcon.classList.remove('is-active');
+        });
+            window.addEventListener('resize', () => {
+            nav.classList.remove('responsive__active');
+            burgerIcon.classList.remove('is-active');
+        });
+    } catch (error) {
+        nav.classList.remove('responsive');
+    }
 };
 
 
@@ -213,12 +218,11 @@ function initializeSwiper(){
     });
 };
 
-
 function particleLoad() {
      /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-    particlesJS.load('particles-js', './assets/scripts/particle/particles.json');
+    particlesJS.load('particles-js', ' http://localhost/vcs_projektas_wp/wp-content/themes/vcs-starter/assets/scripts/particle/particles.json');
 };
-
+//wp-content/themes/vcs-starter/assets/scripts/particle/particles.json
 // =============================================================================
 // FUNCTION CALLS
 // =============================================================================
