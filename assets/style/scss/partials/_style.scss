@@ -88,12 +88,11 @@ p{
 /* ========================================================================== */
 .button-top{
     position: fixed;
-    padding: 10px;
+    display: none;
     bottom: 20px;
     right: 20px;
-    //background-color: red;
-    border-radius: 5px;
 }
+
 header{
     background-color: $color-primary; 
 }

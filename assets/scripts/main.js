@@ -200,6 +200,31 @@ function cardTextAdjust() {
     });
 };
 
+// FIND upButton by class name
+// GET id of topElement to scroll to
+// GET topElement block height
+// CHECK if currentY position ir greater than topElement Height
+// TRUE display icon
+// ELSE not display
+// ADD smooth scrolling on upButton
+function addUpButton(){
+    const upButton = document.querySelector(".button-top");
+    const topElement = document.querySelector(upButton.getAttribute('href'));
+    const topElemeHeight =  topElement.offsetHeight;
+    window.addEventListener('scroll', () => {
+        let currentY = currentYPosition();
+        console.log(topElemeHeight + " " + currentY)
+        if(currentY > topElemeHeight){
+            upButton.style.display = "block";
+        } else {
+            upButton.style.display = "none";
+        }
+    });
+    upButton.addEventListener("click", () =>{
+        smoothScroll(upButton.getAttribute('href')); 
+    });
+}
+
 // =============================================================================
 // SWIPER INITIALIZATION
 // =============================================================================
@@ -222,15 +247,21 @@ function initializeSwiper(){
     });
 };
 
+
+function particleLoad() {
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+   particlesJS.load('particles-js', './assets/scripts/particle/particles.json');
+};
 //wp-content/themes/vcs-starter/assets/scripts/particle/particles.json
 // =============================================================================
 // FUNCTION CALLS
 // =============================================================================
-    //particleLoad();
+    particleLoad();
     addActionOnScroll();
     responsiveMenu();
     addSticky();
     progressBarLoader();
     cardTextAdjust();
     initializeSwiper();
+    addUpButton();
 
