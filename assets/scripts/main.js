@@ -4,16 +4,20 @@
 //const sticky = navbar.offsetHeight;
 
 const addSticky = () => {
-    const navbar = document.querySelector('#header');
-    const sticky = navbar.offsetHeight;
-
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset >= sticky) { 
-            navbar.classList.add("sticky-background")
-        } else {
-            navbar.classList.remove("sticky-background");       
-        }; 
-    });
+    try {
+        const navbar = document.querySelector('#header');
+        const sticky = navbar.offsetHeight;
+    
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset >= sticky) { 
+                navbar.classList.add("sticky-background")
+            } else {
+                navbar.classList.remove("sticky-background");       
+            }; 
+        }); 
+    } catch (error) {
+        
+    }
 };
 
 
@@ -142,7 +146,7 @@ function activeClass(sectionId, navElement){
 // ADD activeClass
 // =============================================================================
 function addActionOnScroll(){
-    const elements = document.querySelectorAll("nav a");
+    const elements = document.querySelectorAll("nav a, .hero a");
     elements.forEach((element) => {
         let eID = element.getAttribute('href');
         if(eID[0] == '#') {
@@ -168,16 +172,16 @@ function responsiveMenu(){
             nav.classList.toggle('responsive__active');
             burgerIcon.classList.toggle('is-active');
         });
-            window.addEventListener('scroll', () => {
+        window.addEventListener('scroll', () => {
             nav.classList.remove('responsive__active');
             burgerIcon.classList.remove('is-active');
         });
-            window.addEventListener('resize', () => {
+        window.addEventListener('resize', () => {
             nav.classList.remove('responsive__active');
             burgerIcon.classList.remove('is-active');
         });
     } catch (error) {
-        nav.classList.remove('responsive');
+        
     }
 };
 
@@ -218,15 +222,11 @@ function initializeSwiper(){
     });
 };
 
-function particleLoad() {
-     /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-    particlesJS.load('particles-js', './assets/scripts/particle/particles.json');
-};
 //wp-content/themes/vcs-starter/assets/scripts/particle/particles.json
 // =============================================================================
 // FUNCTION CALLS
 // =============================================================================
-    particleLoad();
+    //particleLoad();
     addActionOnScroll();
     responsiveMenu();
     addSticky();
