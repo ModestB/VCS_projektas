@@ -503,6 +503,18 @@ label:focus,
   content: "\e923";
 }
 
+.icon-circle-up:before {
+  content: "\ea41";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-github:before {
+  content: "\eab0";
+}
+
 /* ========================================================================== */
 /* SCSS VERIABLES */
 /* ========================================================================== */
@@ -609,6 +621,15 @@ p {
 /* ========================================================================== */
 /* LANDING PAGE + NAV START */
 /* ========================================================================== */
+.button-top {
+  position: fixed;
+  padding: 10px;
+  bottom: 20px;
+  right: 20px;
+  background-color: red;
+  border-radius: 5px;
+}
+
 header {
   background-color: #000;
 }

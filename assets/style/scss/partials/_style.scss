@@ -86,7 +86,14 @@ p{
 /* ========================================================================== */
 /* LANDING PAGE + NAV START */
 /* ========================================================================== */
-
+.button-top{
+    position: fixed;
+    padding: 10px;
+    bottom: 20px;
+    right: 20px;
+    background-color: red;
+    border-radius: 5px;
+}
 header{
     background-color: $color-primary; 
 }
