@@ -263,9 +263,6 @@
 /* LESST THEN 479px */
 /* ========================================================================== */
 @media  screen and (max-width: 479px) {
-    #particles-js canvas{
-        display: none;
-    }
 
     .container, .timeline, .separation{
         min-width: 360px;

@@ -210,7 +210,7 @@ function cardTextAdjust(selector, charAmount) {
 function addUpButton(){
     try {
         const upButton = document.querySelector(".button-top");
-        const topElement = document.querySelector(upButton.getAttribute('href'));
+        const topElement = document.querySelector('header');
         const topElemeHeight =  topElement.offsetHeight;
         window.addEventListener('scroll', () => {
             let currentY = currentYPosition();
@@ -221,7 +221,7 @@ function addUpButton(){
             };
         });
         upButton.addEventListener("click", () =>{
-            smoothScroll(upButton.getAttribute('href')); 
+            smoothScroll('header'); 
         });
     } catch (error) {
         

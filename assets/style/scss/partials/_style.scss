@@ -91,6 +91,7 @@ p{
     display: none;
     bottom: 20px;
     right: 20px;
+    cursor: pointer;
 }
 
 header{
@@ -598,14 +599,13 @@ blockquote {
         height: 100%;
         box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
         justify-content: space-between;
-        transition: ease-in-out 0.5s; 
+        transition: ease-in-out 0.4s; 
     }
     .card__text{
         h2{
             font-size: 1.5rem;
             padding: 0 1rem;
             font-weight: 400;
-            margin-bottom: 1rem;
         }
 
         p{
@@ -621,7 +621,7 @@ blockquote {
     .card__subtitle{
         width: 100%;
         font-size: 0.875rem;
-        margin-bottom:0;
+        margin-bottom: 0;
     }
 
     .card__actionbar{
@@ -637,7 +637,6 @@ blockquote {
             line-height: 40px;
             padding: 0 0.5rem;
             color: $color-primary;
-            border-left:  1px solid #E0E0E0;
         }
 
         .card__button:hover{
@@ -647,8 +646,7 @@ blockquote {
 }
 
 .card__body:hover{
-    -webkit-transform: translate3d(0, -5px, 0);
-    transform: translate3d(0, -5px, 0);
+    transform: translateY(-5px);
 
 }
 .card__subtitle.flex-container{
