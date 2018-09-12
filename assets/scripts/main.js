@@ -1,23 +1,23 @@
 'use strict';
+
 //On scroll adds class sticky background to element with ID #header
 //const navbar = document.querySelector('#header');
 //const sticky = navbar.offsetHeight;
-
-const addSticky = () => {
+function addSticky() {
     try {
         const navbar = document.querySelector('#header');
         const sticky = navbar.offsetHeight;
     
         window.addEventListener('scroll', () => {
             if (window.pageYOffset >= sticky) { 
-                navbar.classList.add("sticky-background")
+                navbar.classList.add("sticky-background");
             } else {
                 navbar.classList.remove("sticky-background");       
             }; 
         }); 
     } catch (error) {
         
-    }
+    };
 };
 
 
@@ -125,17 +125,15 @@ function smoothScroll(eID) {
 // ELSE remove
 function activeClass(sectionId, navElement){
     const sectionEle = document.querySelector(sectionId);
-    window.addEventListener('scroll', () => {
-        const sectionTop = sectionEle.offsetTop - 120;
-        const sectionHeight = sectionEle.offsetHeight;
-        const currentY = currentYPosition();
+    const sectionTop = sectionEle.offsetTop - 150;
+    const sectionHeight = sectionEle.offsetHeight;
+    const currentY = currentYPosition();
 
-        if(currentY >= sectionTop && currentY < (sectionTop + sectionHeight)){
-            navElement.classList.add('active');
-        } else {
-            navElement.classList.remove('active');
-        };
-    });
+    if(currentY >= sectionTop && currentY < (sectionTop + sectionHeight)){
+        navElement.classList.add('active'); 
+    } else {
+        navElement.classList.remove('active');
+    };
 };
 
 // =============================================================================
@@ -153,9 +151,11 @@ function addActionOnScroll(){
             element.addEventListener("click", (event) =>{
                 event.preventDefault();
                 smoothScroll(eID); 
-                activeClass(eID, element);
             });
-        }
+            window.addEventListener('scroll', () => {
+                activeClass(eID, element); 
+            });
+        };
     });
 };
 
@@ -164,7 +164,7 @@ function addActionOnScroll(){
 function responsiveMenu(){
     const nav = document.querySelector("nav");
     try {
-        const burgerIcon = document.querySelector(".hamburger")
+        const burgerIcon = document.querySelector(".hamburger");
         nav.classList.add('responsive');
 
         burgerIcon.addEventListener('click', (event) => {
@@ -182,7 +182,7 @@ function responsiveMenu(){
         });
     } catch (error) {
         
-    }
+    };
 };
 
 
@@ -190,12 +190,12 @@ function responsiveMenu(){
 // CHECK if it's longer than 80 characters
 // TRUE cut to 80 characters add ... on the end
 // CHANGE .card__text p innerHTML to updated value
-function cardTextAdjust() {
-    const textElArr = document.querySelectorAll(".card__text p");
+function cardTextAdjust(selector, charAmount) {
+    const textElArr = document.querySelectorAll(selector);
     textElArr.forEach((textEl) => {
         let text = textEl.innerHTML;
-        if(text.length > 80){
-            textEl.innerHTML = `${text.substring(0, 80)}...`    
+        if(text.length > charAmount){
+            textEl.innerHTML = `${text.substring(0, charAmount)}...`    
         };   
     });
 };
@@ -208,22 +208,25 @@ function cardTextAdjust() {
 // ELSE not display
 // ADD smooth scrolling on upButton
 function addUpButton(){
-    const upButton = document.querySelector(".button-top");
-    const topElement = document.querySelector(upButton.getAttribute('href'));
-    const topElemeHeight =  topElement.offsetHeight;
-    window.addEventListener('scroll', () => {
-        let currentY = currentYPosition();
-        console.log(topElemeHeight + " " + currentY)
-        if(currentY > topElemeHeight){
-            upButton.style.display = "block";
-        } else {
-            upButton.style.display = "none";
-        }
-    });
-    upButton.addEventListener("click", () =>{
-        smoothScroll(upButton.getAttribute('href')); 
-    });
-}
+    try {
+        const upButton = document.querySelector(".button-top");
+        const topElement = document.querySelector(upButton.getAttribute('href'));
+        const topElemeHeight =  topElement.offsetHeight;
+        window.addEventListener('scroll', () => {
+            let currentY = currentYPosition();
+            if(currentY > topElemeHeight){
+                upButton.style.display = "block";
+            } else {
+                upButton.style.display = "none";
+            };
+        });
+        upButton.addEventListener("click", () =>{
+            smoothScroll(upButton.getAttribute('href')); 
+        });
+    } catch (error) {
+        
+    };
+};
 
 // =============================================================================
 // SWIPER INITIALIZATION
@@ -252,7 +255,7 @@ function particleLoad() {
     /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
    particlesJS.load('particles-js', './assets/scripts/particle/particles.json');
 };
-//wp-content/themes/vcs-starter/assets/scripts/particle/particles.json
+
 // =============================================================================
 // FUNCTION CALLS
 // =============================================================================
@@ -261,7 +264,8 @@ function particleLoad() {
     responsiveMenu();
     addSticky();
     progressBarLoader();
-    cardTextAdjust();
+    cardTextAdjust('.card__text p', 80);
+    cardTextAdjust('.card__text a h2', 25);
     initializeSwiper();
     addUpButton();
 
