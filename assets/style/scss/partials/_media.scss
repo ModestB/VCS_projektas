@@ -7,12 +7,15 @@
         width: 100%;
         padding: 0;
     }
+
     h4{
         margin-bottom: 2rem;
     }
+
     i{
         margin-bottom: 1.2rem;
     }  
+
     p{
         margin-bottom: 1.5rem;
     }  
@@ -26,11 +29,6 @@
         display: block;
     }
 
-    nav{
-        display: none;
-    }
-
-      
     .responsive{
         margin-top: 4.5rem;
         display: flex;
@@ -111,7 +109,7 @@
       /* ABOUT ME*/
     .about {
         .self-img{
-            display:none;
+            display: none;
         }
 
         a{
@@ -222,18 +220,15 @@
                 text-align: center;
             }
         }
-        .card__container:hover {
-          -webkit-transform: translate3d(0, 0, 0);
-                  transform: translate3d(0, 0, 0);
-        }
+
         .card__body{
             p{
                 margin-bottom: 0;
             }
         }
+
         .card__body:hover{
-            -webkit-transform: translate3d(0, 0px, 0);
-            transform: translate3d(0, 0px, 0);
+            transform: translateY(0);
             
         }
     }
@@ -247,6 +242,7 @@
             button{
                 align-items: center;
             }
+            
             i{
                 margin:0;
             }
@@ -263,7 +259,7 @@
 /* LESST THEN 479px */
 /* ========================================================================== */
 @media  screen and (max-width: 479px) {
-
+   
     .container, .timeline, .separation{
         min-width: 360px;
     }
@@ -296,9 +292,6 @@
 
 @media screen and (min-width: 768px) {
 
-/* ========================================================================== */
-/* RESUME */
-/* ========================================================================== */
     .resume{
         a:hover {     
         background-color: $color-success;

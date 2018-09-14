@@ -232,22 +232,26 @@ function addUpButton(){
 // SWIPER INITIALIZATION
 // =============================================================================
 function initializeSwiper(){
-    const swiper = new Swiper('.swiper-container', {
-        spaceBetween: 40,
-        centeredSlides: true,
-        autoplay: {
-            delay: 15000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
+    try {
+        const swiper = new Swiper('.swiper-container', {
+            spaceBetween: 40,
+            centeredSlides: true,
+            autoplay: {
+                delay: 15000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });  
+    } catch (error) {
+        
+    }
 };
 
 
